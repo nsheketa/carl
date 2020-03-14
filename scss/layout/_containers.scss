@@ -1,0 +1,17 @@
+.main-container {
+  max-width: $max-width;
+  padding: 0 20px;
+  @include center();
+
+  @include respond-to(md) {
+    padding: 0 30px;
+  }
+  @include respond-to(xl){
+    padding: 0 50px;
+  }
+}
+
+.main-container--fluid {
+  width: 100%;
+  padding: 0 20px;
+}

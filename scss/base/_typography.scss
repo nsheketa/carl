@@ -1,0 +1,62 @@
+/* Basic typography style for text*/
+
+html {
+  // This defines what 1 rem is
+  font-size: 16px;
+}
+
+h1,
+.h1 {
+  font-size: 2.25rem; //45px;
+  font-weight: bold;
+  line-height: 2.4rem; //48px;
+
+  @include respond-to(md) {
+    font-size: 2.25rem; //45px;
+    font-weight: bold;
+    line-height: 2.4rem; //48px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 1.6rem; //32px
+  line-height: 1.1;
+  font-weight: bold;
+  @include respond-to(md) {
+    font-size: 1.75rem; //35px;
+    line-height: 1.9rem; //38px;
+  }
+}
+
+h3,
+.h3 {
+  font-weight: bold;
+  font-size: 1.3rem; //23px;
+  line-height: 1.55rem; //31px
+  @include respond-to(md) {
+    font-size: 1.5rem; //30px;
+    line-height: 1.65rem; //33px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem; //25px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.8;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include respond-to(md){
+    font-size: 1rem; //16px
+  }
+}
+

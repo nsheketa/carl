@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Futura LT';
+    src: url('FuturaLT-Light.eot');
+    src: url('FuturaLT-Light.eot?#iefix') format('embedded-opentype'),
+        url('FuturaLT-Light.woff2') format('woff2'),
+        url('FuturaLT-Light.woff') format('woff'),
+        url('FuturaLT-Light.ttf') format('truetype'),
+        url('FuturaLT-Light.svg#FuturaLT-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

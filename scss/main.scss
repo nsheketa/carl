@@ -1,0 +1,28 @@
+@import 'abstracts/custom-variables';
+@import 'abstracts/mixins';
+
+@import "vendors/bootstrap/bootstrap-grid";
+@import "vendors/slick";
+@import "vendors/normalize";
+
+@import "vendors-extensions/bootstrap-grid";
+
+@import 'base/custom-reset';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/animations';
+@import 'base/helpers';
+
+@import 'layout/containers';
+@import 'layout/grids';
+@import 'layout/general-layout-styles';
+@import 'layout/header';
+@import 'layout/page-menu';
+@import 'layout/footer';
+
+@import 'components/img-fallback';
+@import 'components/lazy-load';
+@import 'components/carousel';
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/video-bg';

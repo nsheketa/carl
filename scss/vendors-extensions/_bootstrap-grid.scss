@@ -1,0 +1,18 @@
+@import "../vendors/bootstrap/variables";
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1200px
+);
+
+@import "../vendors/bootstrap/bootstrap-grid";
+
+.container{
+  @include respond-min(1300){
+    max-width: 1280px;
+  }
+}
+
