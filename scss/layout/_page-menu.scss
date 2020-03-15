@@ -4,7 +4,11 @@
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
   @include square(100%);
+  min-height: 100%;
+  overflow-y: auto;
   background-color: #C6333A;
   @include transition-custom;
   transform: translateX(100%);
@@ -32,12 +36,15 @@
   }
 
   .header__logo{
-    //position: relative;
+    width: 193px;
   }
 }
 
 .page-menu__header-inner{
   justify-content: center;
+  @include respond-to(md){
+    min-height: 33px;
+  }
 }
 
 .page-menu__close{
@@ -57,13 +64,16 @@
 }
 
 .page-menu__close-icon{
+  display: block;
+  @include square(24px);
   margin-right: 17px;
 }
 
 .page-menu__inner{
+  padding: 4vh 0;
   @include respond-to(md){
     display: flex;
-    height: 100%;
+    min-height: calc(100% - 119px);
   }
 }
 
@@ -72,8 +82,8 @@
   display: flex;
   flex-direction: column;
   @include respond-to(md){
-    width: 50%;
-    max-width: 50%;
+    width: 49%;
+    max-width: 49%;
     height: 100%;
     padding-left: 7.8vw;
   }
@@ -82,16 +92,25 @@
 .page-menu__list{
   color: #fff;
   li{
+    margin-bottom: 20px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
     a{
       font-weight: 300;
       font-size: 1.875rem; //30px
       color: inherit;
+      span{
+        sup{
+          font-size: 14px;
+        }
+      }
     }
   }
 
   @include respond-to(md){
     li{
-      margin-bottom: 30px;
+      margin-bottom: 2.8vh;
       &.is-active{
         a{
           &:after, &:before{
@@ -131,11 +150,6 @@
           opacity: 0;
           @include transition-03;
         }
-        span{
-          sub{
-            font-size: 14px;
-          }
-        }
       }
     }
   }
@@ -152,6 +166,9 @@
 //sublist
 .page-menu__list{
   li{
+    ul{
+      padding: 2vh 11px 1vh;
+    }
     li{
       position: relative;
       margin-bottom: 17px;
@@ -224,13 +241,15 @@
       color: #fff;
       font-weight: normal;
       font-size: 18px;
+      text-transform: uppercase;
     }
   }
 
   @include respond-to(xs){
     border-top: none;
     padding-top: 0;
-    margin-top: 7.8vw;
+    //margin-top: 11.5vh;
+    margin-top: 6.5vh;
     ul{
       justify-content: flex-start;
     }
@@ -242,9 +261,9 @@
   @include respond-to(md){
     display: block;
     position: relative;
-    width: 50%;
-    max-width: 50%;
-    height: 100%;
+    width: 51%;
+    max-width: 51%;
+    height: calc(100% + 4vh);
   }
 }
 

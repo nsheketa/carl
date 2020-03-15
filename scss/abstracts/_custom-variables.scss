@@ -1,5 +1,5 @@
 /// Font families
-$Futura: 'Futura Bk BT', sans-serif;
+$Futura: 'Futura BT', sans-serif;
 $Avenir: 'Avenir Book', sans-serif;
 
 /// Base font family
@@ -19,9 +19,10 @@ $baseLetterSpacing: 0;
 
 /// Colors
 $textColor: #000 !default;
-$bodyBackground: #fff;
+$bodyBackground: #FCFCFC;
 
 $redColor: #CF3339;
+$lightGreyColor: #CFCFCF;
 /// spacing gap
 
 
@@ -55,7 +56,7 @@ $breakpoints: (
     ),
   'xxl': screen and
     (
-      min-width: 1920px
+      min-width: 1660px
     )
 ) !default;
 

@@ -1,0 +1,188 @@
+//Homepage hero lines, arrows and slider controls
+
+.home-carousel__controls {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 10;
+  width: 20%;
+  max-width: 20%;
+  height: 130px;
+  margin-top: auto;
+  background-color: #fff;
+  padding: 20px 14px 14px 15px;
+  box-shadow: inset 6px 0px 13px -6px rgba(0, 0, 0, 0.25);
+
+  @include respond-to(md) {
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: -93px;
+    bottom: 0;
+    background-color: transparent;
+    margin: auto 0;
+    @include square(546px);
+    max-width: 546px;
+    box-shadow: none;
+  }
+}
+
+.home-carousel__arrows-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @include respond-to(xs) {
+    width: auto;
+  }
+  @include respond-to(md) {
+    margin-top: 50px;
+  }
+}
+
+.home-carousel__arrow {
+  background-color: transparent !important;
+  cursor: pointer;
+  @include square(15px);
+  border: 1px solid #000;
+  @include transition-06;
+
+  @include on-event {
+    border-color: $redColor;
+  }
+  img {
+    display: none;
+  }
+  &--prev {
+    border-top: none;
+    border-right: none;
+    transform: rotate(45deg);
+  }
+  &--next {
+    border-top: none;
+    border-left: none;
+    transform: rotate(-45deg);
+  }
+
+  @include respond-to(xs) {
+    margin: 0 15px;
+  }
+  @include respond-to(md) {
+    z-index: 10;
+    margin: 0 65px;
+    width: 97px;
+    border: none !important;
+    transform: none;
+    img {
+      width: 100%;
+      display: block;
+    }
+    &--prev {
+      @include on-event {
+        animation: move-on-hover-left 0.7s 2;
+      }
+    }
+    &--next {
+      @include on-event {
+        animation: move-on-hover-right 0.7s 2;
+      }
+    }
+  }
+}
+
+//horizontal lines and circle
+.home-carousel__controls-borders {
+  span {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    background-color: #C4C4C4;
+    left: 93px;
+  }
+  svg {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -46px;
+    @include square(100%);
+    z-index: -1;
+  }
+
+  @include respond-to(md) {
+    span, svg {
+      display: block;
+    }
+  }
+}
+
+.home-carousel__controls-border--top {
+  top: 0;
+}
+
+.home-carousel__controls-border--bottom {
+  bottom: 0;
+}
+
+
+//slick slides count
+.home-slick__paging {
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  z-index: 13;
+  li {
+    display: none;
+    font-size: 14px;
+    line-height: 1;
+    &.slick-active {
+      display: flex;
+      span {
+        padding: 0 3px;
+      }
+      .page-count__current {
+        order: 2;
+        opacity: 0.4;
+      }
+      .page-count__total {
+        order: 0;
+      }
+      .page-count__separator {
+        order: 1;
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    bottom: auto;
+    right: auto;
+    left: 252px;
+    top: 45%;
+    width: auto;
+    li {
+      font-size: 20px;
+    }
+  }
+}
+
+//hero vertical line
+.home-hero__line-vertical {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 180px;
+  width: 1px;
+  background-color: #C4C4C4;
+  z-index: 2;
+
+  @include respond-to(md) {
+    display: block;
+  }
+}

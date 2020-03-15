@@ -1,7 +1,7 @@
 @import "../abstracts/custom-variables";
 
 @font-face {
-  font-family: 'Futura Bk BT';
+  font-family: 'Futura BT';
   src: url('#{$fontsUrl}FuturaBT-Book.eot');
   src: url('#{$fontsUrl}FuturaBT-Book.eot?#iefix') format('embedded-opentype'),
   url('#{$fontsUrl}FuturaBT-Book.woff2') format('woff2'),
@@ -13,7 +13,7 @@
 }
 
 @font-face {
-  font-family: 'Futura Bk BT';
+  font-family: 'Futura BT';
   src: url('#{$fontsUrl}Futura-BookItalic.eot');
   src: url('#{$fontsUrl}Futura-BookItalic.eot?#iefix') format('embedded-opentype'),
   url('#{$fontsUrl}Futura-BookItalic.woff2') format('woff2'),
@@ -26,25 +26,26 @@
 
 
 @font-face {
-  font-family: 'Futura Bk BT';
-  src: url('#{$fontsUrl}Futura-Medium.eot');
-  src: url('#{$fontsUrl}Futura-Medium.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontsUrl}Futura-Medium.woff2') format('woff2'),
-  url('#{$fontsUrl}Futura-Medium.woff') format('woff'),
-  url('#{$fontsUrl}Futura-Medium.ttf') format('truetype'),
-  url('#{$fontsUrl}Futura-Medium.svg#FuturaBT-Medium') format('svg');
+  font-family: 'Futura BT';
+  src: url('#{$fontsUrl}FuturaBT-Medium.eot');
+  src: url('#{$fontsUrl}FuturaBT-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}FuturaBT-Medium.woff2') format('woff2'),
+  url('#{$fontsUrl}FuturaBT-Medium.woff') format('woff'),
+  url('#{$fontsUrl}FuturaBT-Medium.ttf') format('truetype'),
+  url('#{$fontsUrl}FuturaBT-Medium.svg#FuturaBT-Medium') format('svg');
   font-weight: 500;
   font-style: normal;
 }
 
+
 @font-face {
-  font-family: 'Futura LT';
-  src: url('#{$fontsUrl}FuturaLT-Light.eot');
-  src: url('#{$fontsUrl}uturaLT-Light.eot?#iefix') format('embedded-opentype'),
-  url('#{$fontsUrl}FuturaLT-Light.woff2') format('woff2'),
-  url('#{$fontsUrl}FuturaLT-Light.woff') format('woff'),
-  url('#{$fontsUrl}FuturaLT-Light.ttf') format('truetype'),
-  url('#{$fontsUrl}FuturaLT-Light.svg#FuturaLT-Light') format('svg');
+  font-family: 'Futura BT';
+  src: url('#{$fontsUrl}FuturaBT-Light.eot');
+  src: url('#{$fontsUrl}FuturaBT-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}FuturaBT-Light.woff2') format('woff2'),
+  url('#{$fontsUrl}FuturaBT-Light.woff') format('woff'),
+  url('#{$fontsUrl}FuturaBT-Light.ttf') format('truetype'),
+  url('#{$fontsUrl}FuturaBT-Light.svg#FuturaBT-Light') format('svg');
   font-weight: 300;
   font-style: normal;
 }

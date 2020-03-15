@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
@@ -69,7 +69,7 @@
           <span class="page-menu__close-text hide-in-mob">Close</span>
         </button>
         <a href="index.html" class="header__logo">
-          <img src="img/logo-white.png" alt="Carl">
+          <img src="img/logo-white.svg" alt="Carl">
         </a>
       </div>
     </div>
@@ -132,14 +132,185 @@
 
 <main>
 
+  <div class="home-hero">
+    <div class="home-hero__inner">
+      <div class="home-hero__line-vertical"></div>
+      <div class="home-carousel slick__slider">
+        <div class="home-carousel__item">
+          <div class="home-carousel__item-inner">
+            <div class="home-carousel__item-media">
+              <picture>
+                <source srcset="img/homepage/hero-01.png" media="(min-width: 768px)"/>
+                <img src="img/homepage/hero-01.png" alt=""/>
+              </picture>
+            </div>
+            <div class="home-carousel__item-content">
+              <div class="main-container">
+                <div class="home-carousel__item-content-inner">
+                  <h1>STYLISH <br>
+                    SHARPENER</h1>
+                  <p>Lorem ipsum dolor sit amet, <br>
+                    consectetur adipiscing elit.</p>
+                  <a href="#" class="btn btn--black btn--viewmore">View more
+                    <span>
+                        <svg width="50" height="28" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M36.2869 0.286865L34.0598 2.51412L43.9706 12.425H0V15.5749H43.9706L34.0598 25.4857L36.2869 27.7129L50 13.9998L36.2869 0.286865Z"/>
+                 </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-carousel__item">
+          <div class="home-carousel__item-inner">
+            <div class="home-carousel__item-media">
+              <video class="video__bg" webkit-playsinline="playsinline"
+                     playsinline="playsinline"
+                     muted="muted" loop="loop" preload="auto" data-keepplaying autoplay="autoplay">
+                <source src="video/movie-01.mp4" type="video/mp4">
+                <source src="video/movie-01.webm" type="video/webm">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="home-carousel__item-content">
+              <div class="main-container">
+                <div class="home-carousel__item-content-inner">
+                  <h1>STYLISH <br>
+                    SHARPENER</h1>
+                  <p>Lorem ipsum dolor sit amet, <br>
+                    consectetur adipiscing elit.</p>
+                  <a href="#" class="btn btn--black btn--viewmore">View more
+                    <span>
+                 <svg width="50" height="28" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M36.2869 0.286865L34.0598 2.51412L43.9706 12.425H0V15.5749H43.9706L34.0598 25.4857L36.2869 27.7129L50 13.9998L36.2869 0.286865Z"/>
+                 </svg>
+                </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-carousel__controls">
+        <div class="home-carousel__controls-borders">
+          <span class="home-carousel__controls-border--top"></span>
+          <span class="home-carousel__controls-border--bottom"></span>
+          <svg class="circle" width="453" height="546" viewBox="0 0 453 546" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="180" cy="273" r="272.5" stroke="#C4C4C4"/>
+          </svg>
+        </div>
+        <div class="home-carousel__arrows-wrap">
+          <button type="button" class="home-carousel__arrow home-carousel__arrow--prev">
+            <img src="img/icons/arrow-prev-grey.svg" alt="">
+          </button>
+          <button type="button" class="home-carousel__arrow home-carousel__arrow--next">
+            <img src="img/icons/arrow-next-grey.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="home-catalog">
+    <div class="main-container">
+      <div class="home-catalog__inner">
+        <div class="home-catalog__content">
+          <h3>Feature Catalogue</h3>
+          <ul class="home-catalog__list">
+            <li class="home-catalog__list-item">
+              <a href="#" class="home-catalog__list-link" data-img="#catalog-01">Paper Trimmers <span><sup>40</sup></span></a>
+            </li>
+            <li class="home-catalog__list-item">
+              <a href="#" class="home-catalog__list-link" data-img="#catalog-02">Paper Punches <span><sup>20</sup></span></a>
+            </li>
+            <li class="home-catalog__list-item is-active">
+              <a href="#" class="home-catalog__list-link" data-img="#catalog-03">Office Essentials <span><sup>5</sup></span></a>
+            </li>
+            <li class="home-catalog__list-item">
+              <a href="#" class="home-catalog__list-link" data-img="#catalog-04"> Security Products <span><sup>10</sup></span></a>
+            </li>
+          </ul>
+        </div>
+
+        <!--media-->
+        <div class="home-catalog__media">
+          <div class="home-catalog__media-item" id="catalog-01">
+            <picture>
+              <source srcset="img/homepage/catalog-01.png" media="(min-width: 768px)"/>
+              <img src="img/homepage/catalog-01.png" alt=""/>
+            </picture>
+          </div>
+          <div class="home-catalog__media-item" id="catalog-02">
+            <picture>
+              <source srcset="img/homepage/catalog-01.png" media="(min-width: 768px)"/>
+              <img src="img/homepage/catalog-01.png" alt=""/>
+            </picture>
+          </div>
+          <div class="home-catalog__media-item is-active" id="catalog-03">
+            <picture>
+              <source srcset="img/homepage/catalog-01.png" media="(min-width: 768px)"/>
+              <img src="img/homepage/catalog-01.png" alt=""/>
+            </picture>
+          </div>
+          <div class="home-catalog__media-item" id="catalog-04">
+            <picture>
+              <source srcset="img/homepage/catalog-01.png" media="(min-width: 768px)"/>
+              <img src="img/homepage/catalog-01.png" alt=""/>
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--media-->
+  </section>
+
+  <div class="middle-sections__wrap" style="background-image: url('img/homepage/bg.png')">
+    <section class="home-about">
+      <div class="main-container">
+        <div class="home-about__inner">
+          <div class="home-about__circle"></div>
+          <div class="home-about__content">
+            <h2>About <strong>CarL</strong></h2>
+            <p>CARL has always acted with a world wide vision. <br>
+              We develop new products keeping in mind the new trend in office style. These products development is promoted by interaction of persons,
+              "mono" (things), information, etc., at international level.</p>
+            <a href="#" class="btn btn--black btn--viewmore">View more
+              <span>
+                 <svg width="50" height="28" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M36.2869 0.286865L34.0598 2.51412L43.9706 12.425H0V15.5749H43.9706L34.0598 25.4857L36.2869 27.7129L50 13.9998L36.2869 0.286865Z"/>
+                 </svg>
+              </span>
+            </a>
+          </div>
+          <div class="home-about__media">
+            <picture>
+              <source srcset="img/homepage/about-01.png" media="(min-width: 768px)"/>
+              <img src="img/homepage/about-01.png" alt=""/>
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-manual">
+
+    </section>
+  </div>
+
 </main>
 
 <footer class="footer">
   <div class="main-container">
     <div class="footer__inner">
-        <div class="footer__logo">
-          <img src="img/logo-white.svg" alt="Carl">
-        </div>
+      <div class="footer__logo">
+        <img src="img/logo-white.svg" alt="Carl">
+      </div>
       <nav class="footer-nav">
         <ul>
           <li><a href="#">Shop</a></li>
@@ -182,7 +353,7 @@
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="js/vendor/ofi.min.js"></script>
 <script src="js/vendor/slick.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
 
 </body>
 </html>

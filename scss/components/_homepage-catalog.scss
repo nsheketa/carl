@@ -1,0 +1,195 @@
+.home-catalog {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  @include respond-to(md) {
+    padding-top: 110px;
+  }
+}
+
+.home-catalog__content {
+  padding-top: 60px;
+  padding-bottom: 120px;
+  h3 {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.5;
+    margin-bottom: 30px;
+  }
+
+  @include respond-to(md) {
+    width: 45%;
+    padding-top: 87px;
+    padding-right: 15px;
+
+    h3 {
+      max-width: 400px;
+      font-size: 24px;
+      letter-spacing: 0.2em;
+      color: $textColor;
+      opacity: 0.7;
+      margin-left: auto;
+      margin-bottom: 17px;
+    }
+  }
+  @include respond-to(xl) {
+    padding-right: 37px;
+    h3 {
+      max-width: 525px;
+    }
+  }
+}
+
+.home-catalog__list {
+  @include respond-to(md) {
+    max-width: 400px;
+    margin-left: auto;
+  }
+  @include respond-to(xl) {
+    max-width: 525px;
+  }
+}
+
+.home-catalog__list-item {
+  margin-bottom: 20px;
+  z-index: 2;
+
+  &.is-active {
+    a {
+      font-size: 36px;
+      color: #fff;
+      &:after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    margin-bottom: 17px;
+    &.is-active {
+      a {
+        font-size: 55px;
+        color: #000;
+        justify-content: flex-end;
+      }
+    }
+  }
+  @include respond-to(xl) {
+    &.is-active {
+      a {
+        font-size: 77px;
+      }
+    }
+  }
+  @include respond-to(xxl) {
+    &.is-active {
+      a {
+        font-size: 88px;
+      }
+    }
+  }
+}
+
+.home-catalog__list-link {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  color: #CFCFCF;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 300;
+  z-index: 2;
+  transition: 0s all ease;
+  &:after {
+    content: '';
+    width: 70vw;
+    min-width: 285px;
+    height: 2px;
+    position: absolute;
+    left: -20px;
+    bottom: 0px;
+    background-color: #fff;
+    @include transition-06;
+    transform-origin: left;
+    transform: scale(0, 1);
+  }
+  sup {
+    vertical-align: super;
+    font-size: 14px;
+  }
+  @include respond-to(xs) {
+    &:after {
+      width: 45vw;
+    }
+  }
+  @include respond-to(md) {
+    font-weight: normal;
+    font-size: 50px;
+    color: #CFCFCF;
+    &:after {
+      width: 51vw;
+      left: auto;
+      right: -6vw;
+      background-color: #000;
+    }
+  }
+
+  @include respond-to(xl) {
+    font-size: 66px;
+  }
+  @include respond-to(xxl) {
+    font-size: 72px;
+  }
+}
+
+.home-catalog__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include square(100%);
+  z-index: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include square(100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  }
+  @include respond-to(md) {
+    left: auto;
+    right: 0;
+    top: 110px;
+    width: 54%;
+    height: 100%;
+    &:after {
+      display: none;
+    }
+  }
+  @include respond-to(xl) {
+    width: 54%;
+  }
+}
+
+.home-catalog__media-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include square(100%);
+  opacity: 0;
+  visibility: hidden;
+  @include transition-06;
+
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+  img {
+    @include imageCover;
+  }
+}

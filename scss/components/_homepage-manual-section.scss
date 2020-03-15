@@ -1,0 +1,5 @@
+.home-manual{
+  @include respond-to(md) {
+    padding-top: 167px;
+  }
+}
