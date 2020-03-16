@@ -1,0 +1,103 @@
+.home-manual__info{
+  padding: 70px 0;
+  display: none;
+  @include respond-to(sm){
+    display: block;
+  }
+
+  @include respond-to(md){
+    padding: 144px 0 106px;
+  }
+}
+
+.home-manual__info-inner{
+  max-width: 1323px;
+  margin: auto;
+  @include respond-to(sm){
+    display: flex;
+  }
+}
+
+.home-manual__info-col{
+  position: relative;
+  &:first-of-type{
+
+  }
+  @include respond-to(sm){
+    display: flex;
+    flex-wrap: wrap;
+    &:first-of-type{
+      width: 48%;
+      max-width: 48%;
+      border-right: 1px solid #B7B7B7;
+    }
+    &:last-of-type{
+      width: 52%;
+      max-width: 52%;
+      padding-left: 10px;
+    }
+  }
+  @include respond-to(md){
+    &:first-of-type{
+      padding-right: 4%;
+      .home-manual__list-icon{
+        margin-left: 14%;
+      }
+    }
+    &:last-of-type{
+      justify-content: flex-end;
+      .home-manual__list-icon{
+        margin-left: 22%;
+      }
+    }
+  }
+}
+
+.home-manual__info-col{
+  padding: 0;
+}
+
+.home-manual__info-content{
+  h3{
+    font-size: 20px;
+    font-weight: 900;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 11px;
+  }
+  @include respond-to(sm){
+    @include center;
+    max-width: 70%;
+  }
+  @include respond-to(md){
+    h3{
+      font-size: 25px;
+    }
+  }
+  @include respond-to(xl){
+    h3{
+      font-size: 30px;
+    }
+  }
+}
+
+.home-manual__info-list{
+
+  @include respond-to(xl){
+    li{
+      font-size: 24px;
+      line-height: 1.66;
+    }
+  }
+}
+
+.home-manual__list-icon{
+  max-width: 156px;
+  img{
+    width: 100%;
+  }
+  @include respond-to(sm){
+    @include center;
+    max-width: 30%;
+  }
+}

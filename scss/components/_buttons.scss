@@ -11,6 +11,7 @@
   color: #fff;
   white-space: nowrap;
   border-radius: 0 !important;
+  border: none !important;
   @include transition-06;
   position: relative;
   outline: none !important;
@@ -34,6 +35,11 @@
   &--viewmore {
     width: 125px;
     height: 31px;
+  }
+
+  &--sm {
+    padding: 6px 13px 8px 37px;
+    letter-spacing: 0.1em;
   }
 
   &--black {
@@ -67,7 +73,7 @@
     &.btn--red {
       background-color: #000;
       svg {
-        fill: $redColor;
+        fill: #000;
       }
     }
   }
@@ -77,6 +83,10 @@
     letter-spacing: 0.2em;
     span {
       display: block;
+    }
+
+    &--sm {
+      letter-spacing: 0.1em;
     }
 
     &--viewmore {

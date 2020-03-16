@@ -1,5 +1,232 @@
-.home-manual{
+.home-manual {
   @include respond-to(md) {
-    padding-top: 167px;
+    padding-top: 209px;
+  }
+}
+
+.home-manual__row {
+  position: relative;
+  @include respond-to(md) {
+
+    .main-container {
+      width: 100%;
+    }
+  }
+}
+
+.home-manual__content {
+  margin-top: -36px;
+  &--right{
+    h2 {
+      text-align: right;
+      span {
+        &:after {
+          left: auto;
+          right: -20px;
+        }
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    width: 52%;
+    max-width: 52%;
+    padding-right: 15px;
+    &--left {
+      padding: 70px 15px 70px 50px;
+    }
+    &--right {
+      margin-left: auto;
+      padding: 90px 15px 70px 50px;
+
+      h2 {
+        text-align: left;
+        span {
+          &:after {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+  @include respond-to(xl) {
+    &--left {
+      padding: 232px 15px 109px 69px;
+    }
+    &--right {
+      margin-left: auto;
+      padding: 220px 15px 163px 124px;
+    }
+  }
+}
+
+.home-manual__content {
+  h2 {
+    position: relative;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 0.94;
+    margin-bottom: 10px;
+    span {
+      display: inline-block;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: -20px;
+        width: calc(100% + 40px);
+        height: 3px;
+        background-color: #000;
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    h2 {
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 17px;
+      span {
+        &:after {
+          width: 100vw;
+          height: 1px;
+          background-color: #E8E8E8;
+          bottom: -11px;
+          left: -50vw;
+          z-index: 0;
+        }
+      }
+    }
+  }
+  @include respond-to(xl) {
+    h2 {
+      font-size: 64px;
+    }
+  }
+}
+
+.home-manual__list {
+  padding: 18px 0 24px;
+
+  @include respond-to(md){
+    padding: 0;
+  }
+}
+
+.home-manual__list-item {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 20px;
+
+  font-size: 1rem;
+  font-weight: 300;
+  color: $textColor;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: $lightGreyColor;
+    @include square(5px);
+    border-radius: 50%;
+  }
+
+  @include respond-to(md) {
+    margin-bottom: 0;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.79;
+  }
+
+  @include respond-to(xl) {
+    font-size: 28px;
+  }
+}
+
+.home-manual__list-link {
+  position: relative;
+  font-size: inherit;
+  color: inherit;
+  @include linkHover(#000);
+}
+
+.home-manual__media {
+  position: relative;
+  padding-bottom: 66.7%;
+  width: calc(100% + 40px);
+  left: -20px;
+  img {
+    @include imageCover;
+  }
+
+  @include respond-to(md) {
+    position: absolute;
+    width: 46.5%;
+    max-width: 46.5%;
+    padding-bottom: 34%;
+    max-height: 566px;
+    margin: 0;
+    &--left {
+      left: 0;
+      top: 0;
+      z-index: 3;
+      width: 48%;
+      max-width: 48%;
+    }
+    &--right {
+      left: auto;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+  @include respond-to(xl) {
+    &--left {
+      bottom: 0;
+      top: auto;
+    }
+    &--right {
+      top: 0;
+      bottom: auto;
+    }
+  }
+  @include respond-to(xxl){
+    padding-bottom: 0;
+    height: 566px;
+  }
+  @include respond-min(1920){
+    &--right{
+      width: 48%;
+      max-width: 48%;
+    }
+  }
+}
+
+.home-manual__square {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 120px;
+  height: 140px;
+  background-color: #C6333A;
+  z-index: 2;
+
+  @include respond-to(md){
+    display: block;
+  }
+  @include respond-to(xl) {
+    width: 185px;
+    height: 224px;
   }
 }

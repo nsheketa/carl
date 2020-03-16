@@ -137,13 +137,19 @@ $(document).ready(function () {
 /// End header
 
   //Homepage catalog image change
-  $('.home-catalog__list-link').on('mouseenter', function (e) {
+  function catalogImageChange(e){
+    e.preventDefault();
     let target = $(this).attr('data-img');
     $('.home-catalog__list-item').removeClass('is-active');
     $(this).parent().addClass('is-active');
     $('.home-catalog__media-item').removeClass('is-active');
     $('.home-catalog__media-item' + target).addClass('is-active');
-  }).on('mouseleave', function (e) {
+  }
+
+  $('.home-catalog__list-link')
+    .on('click',catalogImageChange)
+    .on('mouseenter', catalogImageChange)
+    .on('mouseleave', function (e) {
     let target = $(this).attr('data-img');
     $('.home-catalog__media-item' + target).addClass('is-active');
   });
