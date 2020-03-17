@@ -275,7 +275,7 @@
   opacity: 0;
   visibility: hidden;
   z-index: -1;
-  @include transition-03;
+  @include transition-06;
 
   &.is-active{
     opacity: 1;

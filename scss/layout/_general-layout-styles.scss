@@ -36,3 +36,11 @@ body {
     display: none;
   }
 }
+
+.page-wrapper{
+  transition: 0.8s all ease;
+  opacity: 0;
+  &.is-revealed{
+    opacity: 1;
+  }
+}

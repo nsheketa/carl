@@ -49,6 +49,7 @@
   @include square(15px);
   border: 1px solid #000;
   @include transition-06;
+  opacity: 0;
 
   @include on-event {
     border-color: $redColor;
@@ -102,6 +103,7 @@
     height: 1px;
     background-color: #C4C4C4;
     left: 93px;
+    transform: scaleX(0);
   }
   svg {
     display: none;
@@ -110,6 +112,11 @@
     right: -46px;
     @include square(100%);
     z-index: -1;
+
+    circle{
+      stroke-dashoffset: 1711px;
+      stroke-dasharray: 1711;
+    }
   }
 
   @include respond-to(md) {
@@ -121,10 +128,12 @@
 
 .home-carousel__controls-border--top {
   top: 0;
+  transform-origin: left;
 }
 
 .home-carousel__controls-border--bottom {
   bottom: 0;
+  transform-origin: right;
 }
 
 
@@ -137,6 +146,7 @@
   display: flex;
   justify-content: center;
   z-index: 13;
+  opacity: 0;
   li {
     display: none;
     font-size: 14px;
@@ -181,6 +191,8 @@
   width: 1px;
   background-color: #C4C4C4;
   z-index: 2;
+  transform-origin: top;
+  transform: scaleY(0);
 
   @include respond-to(md) {
     display: block;
