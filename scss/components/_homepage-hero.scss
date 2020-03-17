@@ -1,13 +1,16 @@
 .home-hero {
-  height: calc(100vh - 65px);
+  padding-top: 65px;
+  height: 100vh;
   min-height: 600px;
   @include respond-to(sm) {
-    height: calc(100vh - 100px);
+    padding-top: 65px;
+    height: 100vh;
     min-height: 700px;
   }
 
   @include respond-to(md) {
-    height: calc(100vh - 119px);
+    padding-top: 119px;
+    height: 100vh;
   }
 }
 
@@ -76,6 +79,14 @@
     letter-spacing: 0.2em;
     font-weight: 500;
     opacity: 0;
+    @include transition-06;
+    &.is-hidden{
+      opacity: 0 !important;
+      transition: 0s;
+    }
+    &.is-shown{
+      opacity: 1 !important;
+    }
   }
   p {
     font-size: 0.875rem;
@@ -83,10 +94,29 @@
     letter-spacing: -0.4px;
     margin-bottom: 18px;
     opacity: 0;
+    @include transition-06;
+    &.is-hidden{
+      opacity: 0 !important;
+      transition: 0s;
+    }
+    &.is-shown{
+      opacity: 1 !important;
+      transition-delay: 0.2s;
+    }
   }
   .btn{
     opacity: 0;
     transform: translateY(30px);
+    &.is-hidden{
+      opacity: 0 !important;
+      transform: translateY(30px) !important;
+      transition: 0s;
+    }
+    &.is-shown{
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition-delay: 0.1s;
+    }
   }
 
   @include respond-to(md) {

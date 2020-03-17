@@ -47,7 +47,7 @@ $(document).ready(function () {
       distance: '30px',
       origin: 'bottom',
       opacity: 0,
-      duration: 1200,
+      duration: 1500,
     };
 
     let slideUpInterval = {
@@ -60,7 +60,7 @@ $(document).ready(function () {
 
     let fadeIn = {
       opacity: 0,
-      duration: 1200,
+      duration: 1500,
       debug: true,
     };
 
@@ -70,10 +70,44 @@ $(document).ready(function () {
       interval: 300,
     };
 
+    let fadeInIntervalDelay = {
+      opacity: 0,
+      duration: 1200,
+      interval: 300,
+      delay: 200
+    };
+
+    let fadeInIntervalDelayLong = {
+      opacity: 0,
+      duration: 1200,
+      interval: 300,
+      delay: 600
+    };
+
+    let scaleUp = {
+      opacity: 0,
+      scale: 0.85,
+      duration: 1500,
+      debug: true,
+    };
+
+    let scaleUpInterval = {
+      opacity: 0,
+      scale: 0.85,
+      duration: 1500,
+      interval: 300,
+      debug: true,
+    };
+
+
     sr.reveal('.slideUp', slideUp);
     sr.reveal('.slideUpInterval', slideUpInterval);
     sr.reveal('.fadeIn', fadeIn);
     sr.reveal('.fadeInInterval', fadeInInterval);
+    sr.reveal('.fadeInIntervalDelay', fadeInIntervalDelay);
+    sr.reveal('.fadeInIntervalDelayLong', fadeInIntervalDelayLong);
+    sr.reveal('.scaleUp', scaleUp);
+    sr.reveal('.scaleUpInterval', scaleUpInterval);
   }
 
   $('.scroll-link').on('click', e => {
@@ -107,6 +141,7 @@ $(document).ready(function () {
     e.stopPropagation();
     $(this).toggleClass('is-active');
     $(this).parent().find('.header-search__popup').toggleClass('is-active');
+    $('.header-search__input').focus();
   });
 
   $(document).on('click', function (e) {
@@ -156,6 +191,25 @@ $(document).ready(function () {
       $('.home-catalog__media-item' + target).addClass('is-active');
     });
 
+  $('.home-carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    let h1 = $('.home-carousel').find('h1');
+    let p = $('.home-carousel').find('p');
+    let btn = $('.home-carousel').find('.btn');
+    h1.removeClass('is-shown').addClass('is-hidden');
+    p.removeClass('is-shown').addClass('is-hidden');
+    btn.removeClass('is-shown').addClass('is-hidden');
+  });
+
+  $('.home-carousel').on('afterChange', function (event, slick, currentSlide) {
+    let h1 = $('.home-carousel').find('h1');
+    let p = $('.home-carousel').find('p');
+    let btn = $('.home-carousel').find('.btn');
+
+    h1.removeClass('is-hidden').addClass('is-shown');
+    p.removeClass('is-hidden').addClass('is-shown');
+    btn.removeClass('is-hidden').addClass('is-shown');
+  });
+
   //carousels
   $('.home-carousel').slick({
     arrows: true,
@@ -183,9 +237,9 @@ $(document).ready(function () {
 
 
     heroContentTl
-      .staggerFromTo(heading, 0.7, {opacity:0}, {opacity: 1}, 0.1, 'heading')
-      .staggerFromTo(text, 0.7, {opacity:0}, {opacity: 1}, 0.1, '+=0.1')
-      .staggerFromTo(btn, 0.6, {y: 30, opacity:0}, {y: 0, opacity: 1}, 0.1, '+=0.1');
+      .staggerFromTo(heading, 0.7, {opacity: 0}, {opacity: 1}, 0.1, 'heading')
+      .staggerFromTo(text, 0.7, {opacity: 0}, {opacity: 1}, 0.1, '+=0.1')
+      .staggerFromTo(btn, 0.6, {y: 30, opacity: 0}, {y: 0, opacity: 1}, 0.1, '+=0.1');
   }
 
 //homepage animation
@@ -220,8 +274,7 @@ $(document).ready(function () {
       setTimeout(function () {
         $('.home-carousel').slick('slickGoTo', 1);
         $('.home-carousel__item-media video').get(0).play();
-        // heroContentAnimation();
-      },4500)
+      }, 4500)
     }
   }
 
@@ -236,6 +289,14 @@ $(document).ready(function () {
       if (wWidth !== width) {
         wWidth = width;
       }
+    }
+  });
+
+  $(window).on('scroll', function (e) {
+    if ($(this).scrollTop() > 200) {
+      $('.header').addClass('is-scrolling');
+    } else {
+      $('.header').removeClass('is-scrolling');
     }
   });
 

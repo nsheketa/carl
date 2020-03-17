@@ -1,15 +1,43 @@
 .header{
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   padding: 17px 0;
   font-family: $Avenir;
   color: #000;
+  background-color: #fff;
   @include transition-06;
+  z-index: 50;
+
+  &.is-scrolling{
+    padding: 10px 0;
+
+    .header__logo{
+      max-width: 110px;
+    }
+    .header-search__popup{
+      top: 50px;
+    }
+  }
 
   &.is-hidden{
     opacity: 0;
   }
   @include respond-to(md){
     padding: 43px 0;
+
+    &.is-scrolling{
+      padding: 15px 0;
+
+      .header__logo{
+        max-width: 150px;
+      }
+      .header-search__popup{
+        top: 50px;
+      }
+    }
   }
 }
 
@@ -77,26 +105,28 @@
   @include respond-to(md){
     padding-right: 25px;
     &.is-active{
-      img{
-        opacity: 1;
-        &.is-hidden{
-          opacity: 0;
-        }
-      }
+      //img{
+      //  opacity: 1;
+      //  &.is-hidden{
+      //    opacity: 0;
+      //  }
+      //}
     }
   }
 }
 
 .header-search__popup{
-  position: absolute;
-  width: 100vw;
-  top: 100%;
-  right: -20px;
+  position: fixed;
+  width: 100%;
+  top: 65px;
+  right: 0;
+  left: 0;
   background-color: #fff;
   padding: 33px 20px 39px 20px;
   opacity: 0;
   visibility: hidden;
   z-index: -1;
+  transform: translateX(-100%);
   box-shadow: 0px 4px 16px -10px rgba(0, 0, 0, 0.25);
   @include transition-06;
 
@@ -104,14 +134,16 @@
     opacity: 1;
     visibility: visible;
     z-index: 5;
+    transform: translateX(0);
   }
 
   @include respond-to(md){
-    position: relative;
-    top: auto;
-    right: auto;;
-    max-width: 0;
-    padding: 0;
+    top: 90px;
+    //position: relative;
+    //top: auto;
+    //right: auto;;
+    //max-width: 0;
+    //padding: 0;
     opacity: 0;
     visibility: hidden;
     z-index: -1;
@@ -122,8 +154,8 @@
       opacity: 1;
       visibility: visible;
       z-index: 1;
-      max-width: 221px;
-      margin-right: 50px;
+      //max-width: 221px;
+      //margin-right: 50px;
     }
   }
 }
@@ -148,8 +180,10 @@
   @include respond-to(md){
     font-size: 1rem;
     color: #888;
-    padding-right: 0;
-    width: 221px;
+    //padding-right: 0;
+    //width: 221px;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -164,7 +198,7 @@
   }
 
   @include respond-to(md){
-    opacity: 0;
+    //opacity: 0;
   }
 }
 

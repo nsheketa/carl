@@ -157,15 +157,15 @@
         padding: 0 3px;
       }
       .page-count__current {
-        order: 2;
+        //order: 2;
         opacity: 0.4;
       }
-      .page-count__total {
-        order: 0;
-      }
-      .page-count__separator {
-        order: 1;
-      }
+      //.page-count__total {
+      //  order: 0;
+      //}
+      //.page-count__separator {
+      //  order: 1;
+      //}
     }
   }
 

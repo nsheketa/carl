@@ -199,7 +199,8 @@
           <div class="home-carousel__controls-borders">
             <span class="home-carousel__controls-border--top"></span>
             <span class="home-carousel__controls-border--bottom"></span>
-            <svg class="circle home-carousel__controls-circle" width="453" height="546" viewBox="0 0 453 546" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="circle home-carousel__controls-circle" width="453" height="546" viewBox="0 0 453 546" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
               <circle cx="180" cy="273" r="272.5" stroke="#C4C4C4"/>
             </svg>
           </div>
@@ -219,8 +220,8 @@
       <div class="main-container">
         <div class="home-catalog__inner">
           <div class="home-catalog__content">
-            <h3>Feature Catalogue</h3>
-            <ul class="home-catalog__list">
+            <h3 class="fadeIn">Feature Catalogue</h3>
+            <ul class="home-catalog__list fadeInInterval">
               <li class="home-catalog__list-item">
                 <a href="#" class="home-catalog__list-link" data-img="#catalog-01">Paper Trimmers <span><sup>40</sup></span></a>
               </li>
@@ -237,7 +238,7 @@
           </div>
 
           <!--media-->
-          <div class="home-catalog__media">
+          <div class="home-catalog__media fadeInInterval">
             <div class="home-catalog__media-item" id="catalog-01">
               <picture>
                 <source srcset="img/homepage/catalog-01.png" media="(min-width: 768px)"/>
@@ -272,14 +273,16 @@
       <section class="home-about">
         <div class="main-container">
           <div class="home-about__inner">
-            <div class="home-about__circle"></div>
+            <div class="home-about__circle fadeIn"></div>
             <div class="home-about__content">
-              <h2>About <strong>CarL</strong></h2>
-              <p>CARL has always acted with a world wide vision. <br>
-                We develop new products keeping in mind the new trend in office style. These products development is promoted by interaction of
-                persons,
-                "mono" (things), information, etc., at international level.</p>
-              <a href="#" class="btn btn--black btn--viewmore">View more
+              <h2 class="fadeInInterval">About <strong>CarL</strong></h2>
+              <div class="fadeInInterval">
+                <p>CARL has always acted with a world wide vision. <br>
+                  We develop new products keeping in mind the new trend in office style. These products development is promoted by interaction of
+                  persons,
+                  "mono" (things), information, etc., at international level.</p>
+              </div>
+              <a href="#" class="btn btn--black btn--viewmore slideUpInterval">View more
                 <span>
                  <svg width="50" height="28" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -288,7 +291,7 @@
               </span>
               </a>
             </div>
-            <div class="home-about__media">
+            <div class="home-about__media scaleUpInterval">
               <picture>
                 <source srcset="img/homepage/about-01.png" media="(min-width: 768px)"/>
                 <img src="img/homepage/about-01.png" alt=""/>
@@ -301,14 +304,14 @@
       <section class="home-manual">
         <div class="home-manual__row">
           <div class="main-container">
-            <div class="home-manual__media home-manual__media--right">
+            <div class="home-manual__media home-manual__media--right fadeIn">
               <picture>
                 <source srcset="img/homepage/replacement.png" media="(min-width: 768px)"/>
                 <img src="img/homepage/replacement.png" alt=""/>
               </picture>
             </div>
 
-            <div class="home-manual__content home-manual__content--left">
+            <div class="home-manual__content home-manual__content--left fadeInIntervalDelay">
               <h2><span>Replacement Part</span></h2>
               <ul class="home-manual__list">
                 <li class="home-manual__list-item"><a href="#" class="home-manual__list-link">Heavy Duty Punch</a></li>
@@ -319,19 +322,19 @@
         </div>
 
         <div class="home-manual__row home-manual__row--middle">
-          <div class="home-manual__square"></div>
+          <div class="home-manual__square fadeIn"></div>
         </div>
 
         <div class="home-manual__row">
           <div class="main-container">
-            <div class="home-manual__media home-manual__media--left">
+            <div class="home-manual__media home-manual__media--left fadeIn">
               <picture>
                 <source srcset="img/homepage/instruction.png" media="(min-width: 768px)"/>
                 <img src="img/homepage/instruction.png" alt=""/>
               </picture>
             </div>
 
-            <div class="home-manual__content home-manual__content--right">
+            <div class="home-manual__content home-manual__content--right fadeInIntervalDelayLong">
               <h2><span>Instruction Manual</span></h2>
               <ul class="home-manual__list">
                 <li class="home-manual__list-item"><a href="#" class="home-manual__list-link">Heavy Duty Punch</a></li>
@@ -343,7 +346,7 @@
         </div>
       </section>
 
-      <section class="home-manual__info">
+      <section class="home-manual__info fadeInInterval">
         <div class="main-container">
           <div class="home-manual__info-inner">
             <div class="home-manual__info-col">
@@ -377,7 +380,7 @@
       </section>
     </div>
 
-    <section class="cta">
+    <section class="cta fadeInInterval">
       <div class="cta__bg">
         <picture>
           <source srcset="img/homepage/cta.png" media="(min-width: 768px)"/>
@@ -417,7 +420,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer fadeInInterval">
     <div class="main-container">
       <div class="footer__inner">
         <div class="footer__logo">
@@ -467,11 +470,12 @@
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="js/vendor/ofi.min.js"></script>
 <script src="js/vendor/slick.min.js"></script>
+<script src="js/vendor/scrollreveal.min.js"></script>
 <script src="js/vendor/TweenMax.min.js"></script>
 <script src="js/vendor/ScrollMagic.min.js"></script>
 <script src="js/vendor/debug.addIndicators.min.js"></script>
 <script src="js/vendor/animation.gsap.min.js"></script>
-<script src="js/main.min.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
