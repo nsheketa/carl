@@ -33,12 +33,17 @@
 .page-menu__header{
   background-color: transparent;
   position: relative;
+  padding: 17px 0 !important;
   &.is-hidden{
     opacity: 1;
   }
 
   .header__logo{
     width: 193px;
+  }
+
+  @include respond-to(md){
+    padding: 43px 0 !important;
   }
 }
 

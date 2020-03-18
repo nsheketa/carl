@@ -135,24 +135,30 @@ $(document).ready(function () {
     $('.header').addClass('is-hidden');
   });
 
-
   $(".header-search__link").on('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    $(this).toggleClass('is-active');
-    $(this).parent().find('.header-search__popup').toggleClass('is-active');
+    disableScrolling();
+    $('.header').addClass('is-hidden');
+    $('.header-search__popup').addClass('is-active');
     $('.header-search__input').focus();
   });
 
-  $(document).on('click', function (e) {
-    if (!e) e = window.event;  //for mozilla
-    if ($('.header-search__popup').hasClass('is-active')) {
-      if (!$(e.target).closest('.header-search__popup.is-active').length) {
-        $(".header-search__link").removeClass('is-active');
-        $('.header-search__popup').removeClass('is-active');
-      }
-    }
+  $('.header-search__popup-close').on('click', function () {
+    enableScrolling();
+    $(this).parents('.header-search__popup').removeClass('is-active');
+    $('.header').removeClass('is-hidden');
   });
+
+  // $(document).on('click', function (e) {
+  //   if (!e) e = window.event;  //for mozilla
+  //   if ($('.header-search__popup').hasClass('is-active')) {
+  //     if (!$(e.target).closest('.header-search__popup.is-active').length) {
+  //       $(".header-search__link").removeClass('is-active');
+  //       $('.header-search__popup').removeClass('is-active');
+  //     }
+  //   }
+  // });
 
   $('.page-menu__close').on('click', function (e) {
     enableScrolling();
@@ -161,9 +167,9 @@ $(document).ready(function () {
   });
 
 
-  $('.page-menu__list > ul > li > a').on('mouseenter', function (e) {
+  $('.page-menu__list > ul li a').on('mouseenter', function (e) {
     let target = $(this).attr('data-img');
-    $('.page-menu__list>ul > li').removeClass('is-active');
+    $('.page-menu__list>ul li').removeClass('is-active');
     $(this).parent().addClass('is-active');
     $('.page-menu__media-item').removeClass('is-active');
     $('.page-menu__media-item' + target).addClass('is-active');

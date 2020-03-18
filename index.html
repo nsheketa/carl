@@ -44,12 +44,12 @@
               <img src="img/icons/icon-search.svg" alt="">
               <img src="img/icons/icon-close-black.svg" class="is-hidden" alt="">
             </a>
-            <div class="header-search__popup">
-              <input type="text" class="header-search__input" placeholder="Type any to search">
-              <button type="submit" class="header-search__submit">
-                <img src="img/icons/icon-search.svg" alt="">
-              </button>
-            </div>
+            <!--<div class="header-search__popup">-->
+            <!--<input type="text" class="header-search__input" placeholder="Type any to search">-->
+            <!--<button type="submit" class="header-search__submit">-->
+            <!--<img src="img/icons/icon-search.svg" alt="">-->
+            <!--</button>-->
+            <!--</div>-->
           </div>
 
           <a href="#" class="header__lang hide-in-mob">En</a>
@@ -57,6 +57,22 @@
       </div>
     </div>
   </header>
+
+  <div class="header-search__popup">
+    <div class="main-container">
+      <div class="header-search__popup-inner">
+        <button class="header-search__popup-close">
+          <img src="img/icons/icon-close.svg" alt="">
+        </button>
+        <div class="header-search__input-wrap">
+          <input type="text" class="header-search__input" placeholder="Type any to search">
+          <button type="submit" class="header-search__submit">
+            <img src="img/icons/icon-search-white.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--page menu-->
   <div class="page-menu">
@@ -83,10 +99,10 @@
             <li class="is-active">
               <a href="#" data-img="#menu-products"> CARL Products</a>
               <ul>
-                <li><a href="#">Paper Trimmers <span><sup>40</sup></span></a></li>
-                <li><a href="#">Paper Punches <span><sup>10</sup></span></a></li>
-                <li><a href="#">Security Products <span><sup>40</sup></span></a></li>
-                <li><a href="#">Office Essentials <span><sup>10</sup></span></a></li>
+                <li><a href="#" data-img="#menu-about">Paper Trimmers <span><sup>40</sup></span></a></li>
+                <li><a href="#" data-img="#menu-news">Paper Punches <span><sup>10</sup></span></a></li>
+                <li><a href="#" data-img="#menu-support">Security Products <span><sup>40</sup></span></a></li>
+                <li><a href="#" data-img="#menu-news">Office Essentials <span><sup>10</sup></span></a></li>
               </ul>
             </li>
             <li><a href="#" data-img="#menu-about">About</a></li>
@@ -223,16 +239,25 @@
             <h3 class="fadeIn">Feature Catalogue</h3>
             <ul class="home-catalog__list fadeInInterval">
               <li class="home-catalog__list-item">
-                <a href="#" class="home-catalog__list-link" data-img="#catalog-01">Paper Trimmers <span><sup>40</sup></span></a>
+                <a href="#" class="home-catalog__list-link" data-img="#catalog-01">Punch<span><sup>40</sup></span></a>
               </li>
               <li class="home-catalog__list-item">
-                <a href="#" class="home-catalog__list-link" data-img="#catalog-02">Paper Punches <span><sup>20</sup></span></a>
+                <a href="#" class="home-catalog__list-link" data-img="#catalog-02">Multi hole punch<span><sup>20</sup></span></a>
               </li>
               <li class="home-catalog__list-item is-active">
-                <a href="#" class="home-catalog__list-link" data-img="#catalog-03">Office Essentials <span><sup>5</sup></span></a>
+                <a href="#" class="home-catalog__list-link" data-img="#catalog-03">Heavy Duty punch<span><sup>5</sup></span></a>
               </li>
               <li class="home-catalog__list-item">
-                <a href="#" class="home-catalog__list-link" data-img="#catalog-04"> Security Products <span><sup>10</sup></span></a>
+                <a href="#" class="home-catalog__list-link" data-img="#catalog-04">Trimmerspan<span><sup>10</sup></span></a>
+              </li>
+              <li class="home-catalog__list-item">
+                <a href="#" class="home-catalog__list-link" data-img="#catalog-03">Sharpener<span><sup>10</sup></span></a>
+              </li>
+              <li class="home-catalog__list-item">
+                <a href="#" class="home-catalog__list-link" data-img="#catalog-02">Cash box<span><sup>10</sup></span></a>
+              </li>
+              <li class="home-catalog__list-item">
+                <a href="#" class="home-catalog__list-link" data-img="#catalog-01">Others<span><sup>10</sup></span></a>
               </li>
             </ul>
           </div>
@@ -475,7 +500,7 @@
 <script src="js/vendor/ScrollMagic.min.js"></script>
 <script src="js/vendor/debug.addIndicators.min.js"></script>
 <script src="js/vendor/animation.gsap.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
 
 </body>
 </html>

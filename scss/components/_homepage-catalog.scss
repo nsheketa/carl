@@ -9,7 +9,7 @@
 
 .home-catalog__content {
   padding-top: 60px;
-  padding-bottom: 120px;
+  padding-bottom: 100px;
   h3 {
     font-size: 14px;
     letter-spacing: 0.1em;
@@ -23,11 +23,14 @@
 
   @include respond-to(md) {
     width: 45%;
-    padding-top: 87px;
+    //padding-top: 87px;
+    padding-top: 60px;
+    padding-bottom: 80px;
     padding-right: 15px;
 
     h3 {
-      max-width: 400px;
+      //max-width: 400px;
+      max-width: 350px;
       font-size: 24px;
       letter-spacing: 0.2em;
       color: $textColor;
@@ -39,18 +42,29 @@
   @include respond-to(xl) {
     padding-right: 37px;
     h3 {
-      max-width: 525px;
+      //max-width: 525px;
+      max-width: 420px;
+    }
+  }
+  @include respond-to(xxl) {
+    h3 {
+      max-width: 480px;
     }
   }
 }
 
 .home-catalog__list {
   @include respond-to(md) {
-    max-width: 400px;
+    //max-width: 400px;
+    max-width: 350px;
     margin-left: auto;
   }
   @include respond-to(xl) {
-    max-width: 525px;
+    //max-width: 525px;
+    max-width: 420px;
+  }
+  @include respond-to(xxl) {
+    max-width: 480px;
   }
 }
 
@@ -72,23 +86,26 @@
     margin-bottom: 17px;
     &.is-active {
       a {
-        font-size: 55px;
+        //font-size: 55px;
+        font-size: 35px;
         color: #000;
-        justify-content: flex-end;
+        //justify-content: flex-end;
       }
     }
   }
   @include respond-to(xl) {
     &.is-active {
       a {
-        font-size: 77px;
+        //font-size: 77px;
+        font-size: 45px;
       }
     }
   }
   @include respond-to(xxl) {
     &.is-active {
       a {
-        font-size: 88px;
+        //font-size: 88px;
+        font-size: 55px;
       }
     }
   }
@@ -128,7 +145,8 @@
   }
   @include respond-to(md) {
     font-weight: normal;
-    font-size: 50px;
+    //font-size: 50px;
+    font-size: 25px;
     color: #CFCFCF;
     &:after {
       width: 51vw;
@@ -139,10 +157,12 @@
   }
 
   @include respond-to(xl) {
-    font-size: 66px;
+    //font-size: 66px;
+    font-size: 30px;
   }
   @include respond-to(xxl) {
-    font-size: 72px;
+    //font-size: 72px;
+    font-size: 40px;
   }
 }
 

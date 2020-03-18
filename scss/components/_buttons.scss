@@ -61,7 +61,7 @@
   &:active {
 
     svg {
-      animation: move-on-hover-right 0.7s 2;
+      transform: translateX(13px);
     }
 
     &.btn--black {

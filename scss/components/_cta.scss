@@ -75,11 +75,12 @@
 .cta__input-icon {
   position: absolute;
   left: 5px;
-  bottom: 13px;
+  bottom: 15px;
   width: 30px;
 
   @include respond-to(md){
     left: 20px;
+    bottom: 18px;
   }
 }
 
