@@ -47,39 +47,39 @@ $(document).ready(function () {
       distance: '30px',
       origin: 'bottom',
       opacity: 0,
-      duration: 1500,
+      duration: 2000,
     };
 
     let slideUpInterval = {
       distance: '30px',
       origin: 'bottom',
       opacity: 0,
-      duration: 1200,
+      duration: 2000,
       interval: 300,
     };
 
     let fadeIn = {
       opacity: 0,
-      duration: 1500,
+      duration: 2000,
       debug: true,
     };
 
     let fadeInInterval = {
       opacity: 0,
-      duration: 1200,
+      duration: 2000,
       interval: 300,
     };
 
     let fadeInIntervalDelay = {
       opacity: 0,
-      duration: 1200,
+      duration: 2000,
       interval: 300,
       delay: 200
     };
 
     let fadeInIntervalDelayLong = {
       opacity: 0,
-      duration: 1200,
+      duration: 2000,
       interval: 300,
       delay: 600
     };
@@ -87,14 +87,14 @@ $(document).ready(function () {
     let scaleUp = {
       opacity: 0,
       scale: 0.85,
-      duration: 1500,
+      duration: 2500,
       debug: true,
     };
 
     let scaleUpInterval = {
       opacity: 0,
       scale: 0.85,
-      duration: 1500,
+      duration: 2500,
       interval: 300,
       debug: true,
     };
@@ -265,11 +265,11 @@ $(document).ready(function () {
     const paging = $('.home-slick__paging');
 
     heroTl
-      .staggerFromTo(img, 3, {scale: 1, opacity: 0.3}, {scale: 1.15, opacity: 1}, 0.6, 'border')
-      .staggerTo(topLine, 2, {scaleX: 1}, 0.6, 'border')
-      .staggerTo(bottomLine, 2, {scaleX: 1}, 0.6, 'border')
-      .staggerTo(verticalLine, 2, {scaleY: 1}, 0.6, 'border')
-      .staggerTo(circle, 2, {strokeDashoffset: 0}, 0.6, 'border')
+      .staggerFromTo(img, 5, {scale: 1.15, opacity: 0.3}, {scale: 1, opacity: 1}, 0.6, 'border')
+      .staggerTo(topLine, 3, {scaleX: 1}, 0.6, 'border')
+      .staggerTo(bottomLine, 3, {scaleX: 1}, 0.6, 'border')
+      .staggerTo(verticalLine, 3, {scaleY: 1}, 0.6, 'border')
+      .staggerTo(circle, 2.5, {strokeDashoffset: 0}, 0.6, 'border')
       .staggerTo(arrows, 0.4, {opacity: 1}, 0.6, '+=0.2')
       .staggerTo(paging, 0.4, {opacity: 1}, 0.6, 'heading');
   }
@@ -280,7 +280,7 @@ $(document).ready(function () {
       setTimeout(function () {
         $('.home-carousel').slick('slickGoTo', 1);
         $('.home-carousel__item-media video').get(0).play();
-      }, 4500)
+      }, 5500)
     }
   }
 

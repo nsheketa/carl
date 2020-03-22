@@ -13,20 +13,27 @@ h1,
 
 h2,
 .h2 {
-    @include respond-to(md) {
-    }
+  position: relative;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  @include respond-to(md) {
+    font-size: 40px;
+  }
 }
 
 h3,
 .h3 {
 
   @include respond-to(md) {
-   }
+  }
 }
 
 h4,
 .h4 {
- }
+}
 
 p {
   font-size: 0.875rem;
@@ -37,11 +44,11 @@ p {
     margin-bottom: 0;
   }
 
-  @include respond-to(md){
+  @include respond-to(md) {
     font-size: 1rem; //16px
   }
 }
 
-sup{
+sup {
   font-size: 14px;
 }

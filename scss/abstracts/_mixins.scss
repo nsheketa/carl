@@ -427,3 +427,17 @@
     }
   }
 }
+
+@mixin title-bordered(){
+  position: relative;
+  &:before{
+    content: '';
+    display: block;
+    width: 51px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+}

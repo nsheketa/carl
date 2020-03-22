@@ -1,0 +1,75 @@
+.about-history {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  z-index: 2;
+  @include respond-to(md) {
+    padding-top: 87px;
+    padding-bottom: 30px;
+  }
+}
+
+.about-history__media {
+  position: relative;
+  padding-bottom: 61.5%;
+
+  img {
+    @include imageCover;
+  }
+  @include respond-to(md) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-bottom: 0;
+    height: 100%;
+    width: 56%;
+  }
+}
+
+.about-history__content {
+  padding-top: 26px;
+
+  @include respond-to(md) {
+    padding-top: 0;
+    width: 100%;
+    margin-left: auto;
+    background-color: #eee;
+  }
+}
+
+.about-history__content-inner {
+  text-align: center;
+  max-width: 332px;
+  @include center;
+  h2 {
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 2;
+    color: #575757;
+  }
+  @include respond-to(md) {
+    padding-top: 136px;
+    padding-bottom: 209px;
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: left;
+    p{
+      font-size: 30px;
+      line-height: 1.33;
+      color: #7E7E7E;
+      letter-spacing: 0.7px;
+      max-width: 92%;
+    }
+  }
+  @include respond-to(xl){
+    padding-right: 70px;
+  }
+  @include respond-to(xxl){
+    max-width: 582px;
+  }
+}

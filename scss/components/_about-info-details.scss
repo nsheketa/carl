@@ -1,0 +1,102 @@
+.about-info__details{
+  position: relative;
+  padding-top: 40px;
+  padding-left: 76px;
+  .h2{
+    color: #C6333A;
+    line-height: 0.9;
+    letter-spacing: 0;
+    margin-bottom: 18px;
+  }
+  p{
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 1.38;
+  }
+
+  @include respond-to(md){
+    padding-top: 106px;
+    padding-left: 0;
+  }
+  @include respond-to(xxl){
+    width: 919px;
+  }
+}
+
+.about-info__details-num{
+  position: absolute;
+  left: -19px;
+  top: 82px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 120px;
+  line-height: 0;
+  color: #C6333A;
+  font-family: $Noto;
+
+
+  @include respond-to(md){
+    left: -408px;
+    top: 83px;
+    font-size: 600px;
+  }
+}
+
+.about-info__details-list{
+  margin-top: 45px;
+  margin-left: -76px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include respond-to(md){
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-left: 0;
+  }
+}
+
+.about-info__details-item{
+  width: 50%;
+  max-width: 50%;
+  text-align: center;
+  padding-right: 15px;
+  margin-bottom: 58px;
+  z-index: 2;
+  @include respond-to(md){
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.about-info__details-icon{
+  max-width: 81px;
+  margin-bottom: 19px;
+  @include center;
+  img{
+    width: 100%;
+  }
+  @include respond-to(sm){
+    max-width: 70px;
+  }
+  @include respond-to(xl){
+    max-width: 100px;
+  }
+}
+
+.about-info__details-content{
+  p{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  @include respond-to(md){
+    p{
+      font-size: 18px;
+    }
+  }
+  @include respond-to(xl){
+    p{
+      font-size: 20px;
+    }
+  }
+}
