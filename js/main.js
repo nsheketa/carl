@@ -99,7 +99,6 @@ $(document).ready(function () {
       debug: true,
     };
 
-
     sr.reveal('.slideUp', slideUp);
     sr.reveal('.slideUpInterval', slideUpInterval);
     sr.reveal('.fadeIn', fadeIn);
@@ -284,6 +283,19 @@ $(document).ready(function () {
     }
   }
 
+  $('.about-timeline__items').slick({
+    dots: false,
+    arrows: false,
+    speed: 800
+  });
+
+  $('.about-timeline__link').click(function(e) {
+    e.preventDefault();
+    let slideno = $(this).data('target');
+    $('.about-timeline__link').removeClass('is-active');
+    $(this).addClass('is-active');
+    $('.about-timeline__items').slick('slickGoTo', slideno - 1);
+  });
 
   /* Trigger resize once */
   $(window).resize(function () {

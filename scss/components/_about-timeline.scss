@@ -1,0 +1,174 @@
+.about-timeline {
+  padding-top: 35px;
+  padding-bottom: 109px;
+
+  @include respond-to(md){
+    padding-top: 65px;
+  }
+}
+
+.about-timeline__links {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0 38px;
+  max-width: 963px;
+  @include center;
+}
+
+.about-timeline__link {
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.4;
+  padding-bottom: 9px;
+  border: none;
+  border-bottom: 4px solid transparent;
+  background-color: transparent;
+  @include transition-06;
+  &.is-active {
+    color: #C6333A;
+    opacity: 1;
+    border-color: #C6333A;
+  }
+  @include on-event{
+    color: #C6333A;
+  }
+
+  @include respond-to(md){
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}
+
+.about-timeline__item-inner {
+  @include respond-to(md) {
+
+    display: flex;
+    justify-content: space-between;
+  }
+  @include respond-to(xl){
+    padding-left: 37px;
+    padding-right: 65px;
+  }
+}
+
+.about-timeline__item-content-wrap {
+
+  @include respond-to(md){
+    width: 60%;
+    max-width: 60%;
+    display: flex;
+  }
+  @include respond-to(xl){
+    width: 56%;
+    max-width: 56%;
+  }
+}
+
+.about-timeline__item-content-img {
+  position: relative;
+  width: 176px;
+  margin-bottom: 30px;
+  @include respond-to(sm){
+    width: 256px;
+  }
+  @include respond-to(md) {
+    flex: 1 0 256px;
+    margin-bottom: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.about-timeline__item-header {
+  position: absolute;
+  left: 140px;
+  bottom: 0;
+  padding: 11px 21px 17px 21px;
+  background-color: rgba(#fff, 0.9);
+  width: calc(100vw - 20px - 140px);
+  max-width: 300px;
+  h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.35;
+    letter-spacing: -0.4px;
+  }
+
+  @include respond-to(sm){
+    left: 200px;
+  }
+  @include respond-to(md) {
+    position: relative;
+    margin-bottom: 0px;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    max-width: 100%;
+    h3 {
+      font-size: 30px;
+      line-height: 1.33;
+      color: #000000;
+    }
+  }
+}
+
+.about-timeline__item-content{
+  max-width: 515px;
+  @include center;
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+    color: #575757;
+  }
+  @include respond-to(md){
+    padding: 38px 30px 0;
+    flex: 1 1 auto;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    p {
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #7E7E7E;
+    }
+  }
+  @include respond-to(xl){
+    p{
+      font-size: 30px;
+    }
+  }
+  @include respond-to(xxl){
+    padding: 29px 75px 0 51px;
+  }
+}
+
+.about-timeline__item-media-wrap {
+  display: none;
+  img {
+    width: 100%;
+  }
+
+  .about-timeline__item-content {
+    text-align: center;
+    margin-top: 19px;
+    padding: 0 10px;
+    max-width: 600px;
+    @include center;
+  }
+
+  @include respond-to(md) {
+    display: block;
+    max-width: 40%;
+    width: 40%;
+  }
+  @include respond-to(xl) {
+    max-width: 44%;
+    width: 44%;
+  }
+}

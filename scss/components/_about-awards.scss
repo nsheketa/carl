@@ -1,0 +1,101 @@
+.about-awards {
+  padding-bottom: 70px;
+  @include respond-to(md){
+    padding-bottom: 164px;
+  }
+}
+
+.about-awards__title {
+  text-align: center;
+  margin-bottom: 40px;
+  h2 {
+    color: #2F2F2F;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7E7E7E;
+  }
+  @include respond-to(md){
+    margin-bottom: 120px;
+    h2{
+      margin-bottom: 32px;
+    }
+    p{
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+}
+
+.about-awards__inner{
+  display: flex;
+  flex-direction: column;
+  @include respond-to(md){
+   flex-direction: row;
+    justify-content: space-between;
+  }
+  @include respond-to(xl){
+    padding-left: 61px;
+    padding-right: 118px;
+  }
+}
+
+.about-awards__content{
+  max-width: 568px;
+  @include center;
+  order: 1;
+  @include respond-to(md){
+    order: 0;
+    padding-right: 20px;
+    margin-left: 0px;
+  }
+}
+
+.about-awards__list{
+  margin-top: 11px;
+}
+
+.about-awards__list-item{
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #7E7E7E;
+  margin-bottom: 26px;
+  span{
+    display: inline-block;
+    margin-right: 17px;
+  }
+
+  @include respond-to(md){
+    font-weight: normal;
+    font-size: 18px;
+    color: #000;
+  }
+  @include respond-to(xl){
+    font-size: 20px;
+  }
+}
+
+.about-awards__media{
+  width: calc(100% + 40px);
+  margin-bottom: 46px;
+  margin-left: -20px;
+  img{
+    width: 100%;
+  }
+  @include respond-to(md){
+    max-width: 50%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  @include respond-to(xl){
+    max-width: 625px;
+  }
+}

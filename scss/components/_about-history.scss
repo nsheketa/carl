@@ -1,7 +1,6 @@
 .about-history {
   position: relative;
   padding-top: 50px;
-  padding-bottom: 30px;
   z-index: 2;
   @include respond-to(md) {
     padding-top: 87px;
@@ -12,6 +11,7 @@
 .about-history__media {
   position: relative;
   padding-bottom: 61.5%;
+  z-index: 1;
 
   img {
     @include imageCover;
