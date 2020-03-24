@@ -107,6 +107,7 @@ $(document).ready(function () {
     sr.reveal('.fadeInIntervalDelayLong', fadeInIntervalDelayLong);
     sr.reveal('.scaleUp', scaleUp);
     sr.reveal('.scaleUpInterval', scaleUpInterval);
+    sr.reveal('.support-list__item', fadeInInterval);
   }
 
   $('.scroll-link').on('click', e => {
@@ -295,6 +296,25 @@ $(document).ready(function () {
     $('.about-timeline__link').removeClass('is-active');
     $(this).addClass('is-active');
     $('.about-timeline__items').slick('slickGoTo', slideno - 1);
+  });
+
+  //faq accordion
+  $('.faq-content__item').on('click', function (e) {
+    if($(this).hasClass('is-open')){
+      $(this).removeClass('is-open');
+      $(this).next('.faq-content__item-desc').slideUp();
+    }else{
+      $('.faq-content__item').removeClass('is-open');
+      $(this).addClass('is-open');
+      $('.faq-content__item-desc').slideUp();
+      $(this).next('.faq-content__item-desc').slideDown();
+    }
+  });
+
+  //support list products menu
+  $('.support-products__list-item--mob').text($('.support-products__list-item.is-active').text());
+  $('.support-products__list-item--mob').on('click',(e)=>{
+    $('.support-products__list').slideToggle(600);
   });
 
   /* Trigger resize once */
