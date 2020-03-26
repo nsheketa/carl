@@ -1,0 +1,85 @@
+.news-section {
+  position: relative;
+  padding-top: 100px;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 51px;
+    left: 0;
+    width: 100%;
+    height: 378px;
+    background: url('#{$imgUrl}news/carl.png')no-repeat center /cover;
+  }
+  @include respond-to(md) {
+    padding-top: 212px;
+    padding-bottom: 150px;
+    &:after{
+      top: 340px;
+    }
+  }
+  @include respond-to(xxl){
+    padding-bottom: 221px;
+  }
+}
+
+.news-section__inner {
+  @include respond-to(md) {
+    padding: 0 8px 0 54px;
+  }
+}
+
+.news-section__heading {
+  margin-bottom: 40px;
+  @include respond-to(md) {
+    margin-bottom: 97px;
+  }
+}
+
+.news-section__subtitle {
+  margin-bottom: 24px;
+  p {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  @include respond-to(md) {
+
+  }
+}
+
+.news-section__title {
+  margin-bottom: 20px;
+  h1 {
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 0.89;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 16px;
+  }
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+    color: #575757;
+    margin-bottom: 0;
+  }
+
+  @include respond-to(md) {
+    margin-bottom: 30px;
+    h1 {
+      font-size: 60px;
+    }
+    p {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 2.5;
+      color: #000000;
+    }
+  }
+}

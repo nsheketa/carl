@@ -229,6 +229,15 @@ $(document).ready(function () {
     },
   });
 
+  $('.news-list__carousel').slick({
+    arrows: true,
+    dots: false,
+    fade: false,
+    prevArrow: $('.news-list__controls').find('.news-list__arrow--prev'),
+    nextArrow: $('.news-list__controls').find('.news-list__arrow--next'),
+    dotsClass: 'home-slick__paging',
+  });
+
 
   function heroContentAnimation() {
     const heroContentTl = new TimelineMax({

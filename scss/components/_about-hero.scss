@@ -1,10 +1,12 @@
 .about-hero{
+  position: relative;
   padding-top: 65px;
-  height: 100vh;
-  min-height: 600px;
+  height: 500px;
+
   @include respond-to(md) {
     padding-top: 119px;
     height: 100vh;
+    min-height: 600px;
   }
 }
 

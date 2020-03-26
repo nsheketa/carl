@@ -1,0 +1,239 @@
+.hews-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include respond-to(md) {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+}
+
+.news-list__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+  margin-top: 47px;
+  border-top: 1px solid rgba(133, 117, 78, 0.3);;
+  @include respond-to(md) {
+    padding-right: 50px;
+    padding-top: 23px;
+    margin: 0 -36px;
+    width: 200px;
+    flex: 1 0 200px;
+    border-top: none;
+    align-items: flex-start;
+    order: 0;
+  }
+  @include respond-to(xl) {
+    width: 352px;
+    flex: 1 0 352px;
+  }
+}
+
+.news-list__arrow {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 5;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: #000000;
+  &:first-of-type {
+    border-right: 1px solid rgba(133, 117, 78, 0.3);;
+  }
+
+  span {
+    display: flex;
+    width: 15px;
+    margin: 0 15px;
+    @include transition-06;
+    img {
+      width: 100%;
+    }
+  }
+  &--prev {
+    padding-right: 15px;
+    @include on-event {
+      span {
+        transform: translateX(-10px);
+      }
+    }
+  }
+  &--next {
+    padding-left: 15px;
+    @include on-event {
+      span {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    line-height: 1;
+  }
+  @include respond-to(xxl) {
+    span {
+      margin: 0 34px;
+    }
+    &--prev {
+      padding-right: 27px;
+    }
+    &--next {
+      padding-left: 27px;
+    }
+  }
+}
+
+.news-list__carousel {
+  @include respond-to(md) {
+    width: calc(100% - 200px);
+    max-width: calc(100% - 200px);
+  }
+  @include respond-to(xl) {
+    width: calc(100% - 352px);
+    max-width: calc(100% - 352px);
+  }
+}
+
+.nl-carousel__item-inner {
+  @include respond-to(sm) {
+    display: flex;
+    margin: 0 -20px;
+  }
+  @include respond-to(md) {
+    margin: 0 -30px;
+  }
+  @include respond-to(xxl) {
+    margin: 0 -52px;
+  }
+}
+
+.nl-carousel__subitem {
+  margin-bottom: 40px;
+  @include respond-to(sm) {
+    width: 50%;
+    max-width: 50%;
+    padding: 0 20px;
+    margin-bottom: 0;
+  }
+  @include respond-to(md) {
+    padding: 0 30px;
+  }
+  @include respond-to(xxl) {
+    padding: 0 46px;
+  }
+}
+
+.nl-carousel__subitem-img {
+  margin-bottom: 26px;
+  img {
+    width: 100%;
+  }
+  @include respond-to(md) {
+    margin-bottom: 33px;
+  }
+}
+
+.nl-carousel__subitem-content {
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2.8;
+    color: #575757;
+  }
+  @include respond-to(md) {
+
+    p {
+      font-size: 16px;
+      line-height: 1.87;
+      color: #5B5B5B;
+      max-width: 500px;
+      max-height: 9em;
+      overflow: hidden;
+    }
+  }
+}
+
+.nl-carousel__subitem-date {
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2.7;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  @include respond-to(md) {
+  }
+}
+
+.nl-carousel__subitem-title {
+  h3 {
+    font-size: 17px;
+    line-height: 2.35;
+    color: #000000;
+  }
+  @include respond-to(md) {
+    h3 {
+      line-height: 1.82;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.nl-carousel__subitem-btn {
+  margin-top: 20px;
+  .btn {
+    width: 175px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 2.5;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #000 !important;
+    span {
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 15px;
+      margin-left: 0;
+      width: 11px;
+      height: 10px;
+      @include transition-06;
+      img {
+        width: 100%;
+      }
+    }
+    @include on-event {
+      span {
+        transform: translateX(10px);
+      }
+    }
+  }
+  @include respond-to(md) {
+    margin-top: 51px;
+    .btn {
+      width: 250px;
+      text-align: left;
+      justify-content: flex-start;
+      padding-left: 50px;
+
+      span {
+        width: 16px;
+        top: 16px;
+        left: 10px;
+      }
+    }
+  }
+}
