@@ -11,7 +11,7 @@
   color: #fff;
   white-space: nowrap;
   border-radius: 0 !important;
-  border: none !important;
+  border: none;
   @include transition-06;
   position: relative;
   outline: none !important;
@@ -56,6 +56,29 @@
     }
   }
 
+  &--bordered{
+    width: 250px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 8px;
+    color: #000;
+    font-size: 16px;
+    line-height: 2.5;
+    letter-spacing: 0.1em;
+    span{
+      display: block;
+      width: 16px;
+      height: auto;
+      margin-right: 26px;
+      margin-left: 0;
+      background-color: transparent;
+      svg{
+        width: 100%;
+        fill: #000;
+        height: auto;
+      }
+    }
+  }
+
   &:hover,
   &:focus,
   &:active {
@@ -76,6 +99,17 @@
         fill: #000;
       }
     }
+
+    &.btn--bordered{
+      color: $redColor;
+      border-color: $redColor;
+        span{
+        transform: translateX(5px);
+          svg{
+            fill: $redColor;
+          }
+      }
+    }
   }
 
   @include respond-to(md) {
@@ -93,6 +127,11 @@
       width: auto;
       height: auto;
       padding: 8px 14px 8px 50px;
+    }
+
+    &--bordered{
+      font-size: 1rem;
+      letter-spacing: 0.1em;
     }
   }
 }

@@ -1,0 +1,139 @@
+.product-light {
+  z-index: 2;
+}
+
+.product-light__inner {
+  position: relative;
+  @include respond-to(md) {
+    display: flex;
+  }
+}
+
+.product-light__img {
+  position: relative;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  padding-bottom: 52%;
+  z-index: 1;
+  img {
+    @include imageCover;
+  }
+  @include respond-to(md) {
+    margin-left: -50px;
+    width: 72%;
+  }
+}
+
+.product-light__content {
+  position: relative;
+  padding-top: 99px;
+  padding-bottom: 99px;
+  max-width: 400px;
+  @include center;
+  z-index: 2;
+  &:after {
+    content: '';
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    @include square(472px);
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    bottom: 0;
+    margin: auto;
+    margin-top: -35px;
+    z-index: -1;
+  }
+  h2 {
+    font-size: 48px;
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+
+  @include respond-to(md) {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding-right: 130px;
+    padding-top: 51px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    max-width: none;
+    &:after{
+      @include square(580px);
+      margin-top: auto;
+      top: 0px;
+    }
+    h2 {
+      font-size: 60px;
+    }
+  }
+  @include respond-to(xl) {
+    padding-right: 176px;
+    &:after{
+      @include square(690px);
+
+    }
+    h2 {
+      font-size: 80px;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.product-light__list {
+  z-index: 2;
+  @include respond-to(md) {
+    padding-left: 185px;
+  }
+}
+
+.product-light__list-item {
+  position: relative;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 10px;
+  padding-left: 25px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    @include square(5px);
+    border-radius: 50%;
+    background-color: #c4c4c4;
+  }
+}
+
+.product-light__content-btn {
+  margin-top: 20px;
+  z-index: 2;
+  .btn {
+
+  }
+  @include respond-to(md) {
+    margin-top: 40px;
+    margin-right: -81px;
+    text-align: right;
+  }
+  @include respond-to(xl) {
+    margin-top: 87px;
+    margin-right: -130px;
+  }
+}

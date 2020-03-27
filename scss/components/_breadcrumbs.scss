@@ -1,0 +1,36 @@
+.breadcrumbs{
+  margin-bottom: 10px;
+  ul{
+    text-align: center;
+  }
+  li{
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2.86;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    &:after{
+      content: '/';
+      display: inline-block;
+      color: #fff;
+      font-size: inherit;
+      margin: 0 3px;
+    }
+    a{
+      color: inherit;
+    }
+  }
+  &--white{
+    color: #fff;
+  }
+  &--centered{
+    text-align: center;
+  }
+
+  @include respond-to(md){
+
+  }
+}

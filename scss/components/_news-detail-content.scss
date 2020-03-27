@@ -1,0 +1,40 @@
+.news-detail__content{
+  margin-bottom: 100px;
+  h1{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.36;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  p{
+    line-height: 2;
+    color:  #575757;
+  }
+
+  @include respond-to(md){
+    margin-bottom: 150px;
+    h1{
+      font-size: 40px;
+      line-height: .42;
+      color: #000000;
+      margin-bottom: 70px;
+    }
+    p{
+      line-height: 1.87;
+      color: #000;
+    }
+  }
+
+  @include respond-to(xl){
+    h1{
+      font-size: 72px;
+    }
+  }
+}
+
+.news-section__inner{
+  max-width: 1098px;
+  @include center;
+}

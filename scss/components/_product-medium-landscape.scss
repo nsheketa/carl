@@ -1,0 +1,117 @@
+.product-medium__landscape {
+  position: relative;
+  max-width: 985px;
+  @include center;
+
+  .product-medium__content {
+    margin-right: 0;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(100% + 238px);
+      height: calc(100% + 339px);
+      top: 0;
+      left: -38%;
+      right: 0;
+      bottom: 92px;
+      margin: auto;
+      z-index: 0;
+      border: 1px solid;
+      border-radius: 50%;
+    }
+  }
+  .product-medium__content-inner {
+    text-align: right;
+  }
+  @include respond-to(md) {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -160px;
+      left: -34%;
+      @include square(455px);
+      background: url("#{$imgUrl}product/half-circle-pink.png") no-repeat center /contain;
+      z-index: 0;
+    }
+    .product-medium__content {
+      &:after {
+        display: none;
+      }
+    }
+    .product-medium__content-inner {
+      padding-left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  }
+}
+
+.product-medium__img--landscape {
+  z-index: 1;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  img {
+    width: 100%;
+  }
+  @include respond-to(md) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.product-medium__content-title--left {
+  text-align: right;
+  right: 20px;
+  bottom: -50px;
+  max-width: 290px;
+  @include respond-to(md) {
+    left: -26px;
+    bottom: -5px;
+    right: auto;
+    max-width: 100%;
+    text-align: left;
+  }
+  @include respond-to(xl) {
+    left: -96px;
+  }
+}
+
+.product-medium__content-btn--circled {
+  position: relative;
+  z-index: 2;
+
+  @include respond-to(md) {
+    &:after {
+      content: '';
+      display: block;
+      border-radius: 50%;
+      border: 1px solid #000;
+      width: calc(100% + 97px);
+      height: calc(100% + 305px);
+      position: absolute;
+      top: 0px;
+      left: -54%;
+      bottom: 0;
+      transform: translateX(25%);
+      margin: auto;
+      z-index: 0;
+      @include transition-06;
+    }
+    a {
+      z-index: 2;
+    }
+  }
+  @include on-event{
+    &:after{
+      border-color: $redColor;
+    }
+  }
+
+  @include respond-to(md){
+    margin-top: -21px;
+  }
+}

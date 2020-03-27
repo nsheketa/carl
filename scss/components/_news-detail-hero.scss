@@ -1,0 +1,92 @@
+.news-detail__hero{
+  position: relative;
+  padding-top: 28px;
+  margin-top: 65px;
+  &:before, &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  &:before{
+    background: url("#{$imgUrl}news-detail/carl.png")no-repeat center /cover;
+    height: 176px;
+    z-index: 1;
+  }
+  &:after{
+    background: #FFB9B9;
+    height: 300px;
+    z-index: -1 ;
+  }
+
+  @include respond-to(md){
+    padding-top: 86px;
+    margin-top: 118px;
+    &:before{
+      height: 323px;
+    }
+    &:after{
+      height: 733px;
+    }
+  }
+}
+
+.news-detail__hero-inner{
+  max-width: 1098px;
+  @include center;
+}
+
+.news-detail__hero-title{
+  padding: 0 20px;
+  margin-bottom: 27px;
+  h3{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+  }
+
+  @include respond-to(md){
+    margin-bottom: 35px;
+    h3{
+      font-size: 36px;
+      line-height: 1.1;
+    }
+  }
+}
+
+.news-detail__hero-img{
+  position: relative;
+  margin-bottom: 40px;
+  z-index: 2;
+  img{
+    width: 100%;
+  }
+  @include respond-to(md){
+    margin-bottom: 70px;
+  }
+}
+
+.news-detail__hero-date{
+  position: absolute;
+  right: -40px;
+  bottom: 45px;
+  transform: rotate(-90deg);
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 2.35;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+
+  @include respond-to(lg){
+    right: auto;
+    left: -95px;
+    bottom: 90px;
+  }
+}

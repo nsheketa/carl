@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Home</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no"/>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Responsive images polyfill -->
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement('picture');
+  </script>
+  <script src="js/picturefill.min.js" async></script>
+  <!-- Responsive image polyfill end -->
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+<div class="is-mobile"></div>
+
+<div class="page-wrapper">
+  <header class="header">
+    <div class="main-container">
+      <div class="header__inner">
+        <button class="header__hamburger">
+          <span class="header__hamburger-text hide-in-mob">Menu</span>
+          <span class="line"></span><span class="line"></span><span class="line"></span>
+        </button>
+
+        <a href="index.html" class="header__logo">
+          <img src="img/logo-red.svg" alt="Carl">
+        </a>
+
+        <div class="header__inner--right">
+          <div class="header-search">
+            <a href="#" class="header-search__link">
+              <img src="img/icons/icon-search.svg" alt="">
+              <img src="img/icons/icon-close-black.svg" class="is-hidden" alt="">
+            </a>
+            <!--<div class="header-search__popup">-->
+            <!--<input type="text" class="header-search__input" placeholder="Type any to search">-->
+            <!--<button type="submit" class="header-search__submit">-->
+            <!--<img src="img/icons/icon-search.svg" alt="">-->
+            <!--</button>-->
+            <!--</div>-->
+          </div>
+
+          <a href="#" class="header__lang hide-in-mob">En</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="header-search__popup">
+    <a href="index.html" class="header-search__logo">
+      <img src="img/logo-white.svg" alt="Carl">
+    </a>
+    <div class="main-container">
+      <div class="header-search__popup-inner">
+        <button class="header-search__popup-close">
+          <img src="img/icons/icon-close.svg" alt="">
+        </button>
+        <div class="header-search__input-wrap">
+          <input type="text" class="header-search__input" placeholder="Type any to search">
+          <button type="submit" class="header-search__submit">
+            <img src="img/icons/icon-search-white.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--page menu-->
+  <div class="page-menu">
+    <div class="page-menu__header header">
+      <div class="main-container">
+        <div class="page-menu__header-inner header__inner">
+          <button class="page-menu__close">
+          <span class="page-menu__close-icon">
+            <img src="img/icons/icon-close.svg" alt="">
+          </span>
+            <span class="page-menu__close-text hide-in-mob">Close</span>
+          </button>
+          <a href="index.html" class="header__logo">
+            <img src="img/logo-white.svg" alt="Carl">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-menu__inner">
+      <div class="page-menu__list-wrap">
+        <nav class="page-menu__list">
+          <ul>
+            <li class="is-active">
+              <a href="#" data-img="#menu-products"> CARL Products</a>
+              <ul>
+                <li><a href="#" data-img="#menu-about">Paper Trimmers <span><sup>40</sup></span></a></li>
+                <li><a href="#" data-img="#menu-news">Paper Punches <span><sup>10</sup></span></a></li>
+                <li><a href="#" data-img="#menu-support">Security Products <span><sup>40</sup></span></a></li>
+                <li><a href="#" data-img="#menu-news">Office Essentials <span><sup>10</sup></span></a></li>
+              </ul>
+            </li>
+            <li><a href="about.html" data-img="#menu-about">About</a></li>
+            <li><a href="news.html" data-img="#menu-news">News</a></li>
+            <li><a href="support.html" data-img="#menu-support">Support</a></li>
+          </ul>
+        </nav>
+        <div class="page-menu__lang">
+          <ul>
+            <li><a href="#">En</a></li>
+            <li><a href="#">中文</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-menu__media">
+        <div class="page-menu__media-item is-active" id="menu-products">
+          <picture>
+            <source srcset="img/menu/menu-01.png" media="(min-width: 768px)"/>
+            <img src="img/menu/menu-01.png" alt=""/>
+          </picture>
+        </div>
+        <div class="page-menu__media-item" id="menu-about">
+          <picture>
+            <source srcset="img/menu/menu-02.png" media="(min-width: 768px)"/>
+            <img src="img/menu/menu-02.png" alt=""/>
+          </picture>
+        </div>
+        <div class="page-menu__media-item" id="menu-news">
+          <picture>
+            <source srcset="img/menu/menu-03.png" media="(min-width: 768px)"/>
+            <img src="img/menu/menu-03.png" alt=""/>
+          </picture>
+        </div>
+        <div class="page-menu__media-item" id="menu-support">
+          <picture>
+            <source srcset="img/menu/menu-04.png" media="(min-width: 768px)"/>
+            <img src="img/menu/menu-04.png" alt=""/>
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--page menu-->
+
+  <main>
+    <ol class="pages-list" style="background: #f8f9fa; padding: 250px 50px; color: #000;">
+      <li><a href="index.html">Homepage</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="news-detail.html">News Detail</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ol>
+
+  </main>
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/vendor/ofi.min.js"></script>
+<script src="js/vendor/slick.min.js"></script>
+<script src="js/vendor/scrollreveal.min.js"></script>
+<script src="js/vendor/TweenMax.min.js"></script>
+<script src="js/vendor/ScrollMagic.min.js"></script>
+<script src="js/vendor/debug.addIndicators.min.js"></script>
+<script src="js/vendor/animation.gsap.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+</html>
+

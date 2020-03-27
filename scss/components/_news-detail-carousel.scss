@@ -1,0 +1,14 @@
+.news-detail__carousel-wrap{
+  margin-bottom: 29px;
+
+  @include respond-to(md){
+    margin-bottom: 200px;
+  }
+}
+
+.news-detail__media-item-inner{
+  padding: 0 10px;
+  img{
+    width: 100%;
+  }
+}
