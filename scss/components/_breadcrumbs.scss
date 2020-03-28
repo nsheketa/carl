@@ -11,11 +11,12 @@
     line-height: 2.86;
     text-align: center;
     letter-spacing: 0.1em;
+    color: #000;
     text-transform: uppercase;
     &:after{
       content: '/';
       display: inline-block;
-      color: #fff;
+      color: #000;
       font-size: inherit;
       margin: 0 3px;
     }
@@ -24,7 +25,12 @@
     }
   }
   &--white{
-    color: #fff;
+   li{
+     color: #fff;
+     &:after{
+       color: #fff;
+     }
+   }
   }
   &--centered{
     text-align: center;

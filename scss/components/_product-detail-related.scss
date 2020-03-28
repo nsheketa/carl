@@ -1,0 +1,155 @@
+.pdetail-related {
+  position: relative;
+  padding-bottom: 119px;
+  @include respond-to(md) {
+    &:after {
+      content: '';
+      display: block;
+      @include square(1022px);
+      position: absolute;
+      right: -300px;
+      top: -250px;
+      bottom: 0;
+      border: 1px solid rgba(196, 196, 196, 0.5);
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+}
+
+.pdetail-related__inner {
+  position: relative;
+  max-width: 1094px;
+  @include center;
+  h3 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+  }
+  @include respond-to(md) {
+    h3 {
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 67px;
+    }
+  }
+}
+
+.pdetail-related__item-inner {
+  position: relative;
+  display: block;
+  padding: 0 14px;
+  color: #000;
+  @include on-event {
+    .pdetail-related__item-img {
+      img {
+        transform: scale(1.15, 1.15);
+      }
+    }
+  }
+}
+
+.pdetail-related__item-img {
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    transition: 2s all ease;
+  }
+  @include respond-to(md) {
+    margin-bottom: 40px;
+  }
+}
+
+.pdetail-related__item-content {
+  text-align: center;
+  p {
+    font-size: 14px;
+    line-height: 2.86;
+  }
+}
+
+.pdetail-related__item-title {
+  h4 {
+    font-size: 18px;
+    line-height: 2.22;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+.pdetail-related__arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 5;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: #000000;
+  &--prev {
+    left: -15px;
+    @include on-event {
+      .icon {
+        transform: translateX(-10px);
+      }
+    }
+  }
+  &--next {
+    right: -15px;
+    @include on-event {
+      .icon {
+        transform: translateX(10px);
+      }
+    }
+  }
+  span {
+    display: flex;
+    width: 15px;
+    margin: 0 5px;
+    @include transition-06;
+    img {
+      width: 100%;
+    }
+  }
+  .text {
+    display: none;
+    width: auto;
+  }
+  @include respond-to(md) {
+    line-height: 1;
+    &--prev {
+      left: -20px;
+    }
+    &--next {
+      right: -20px;
+    }
+  }
+
+  @include respond-to(xl) {
+    span {
+      margin: 0 15px;
+    }
+    &--prev {
+      left: -125px;
+    }
+    &--next {
+      right: -125px;
+    }
+    .text {
+      display: block;
+    }
+  }
+}

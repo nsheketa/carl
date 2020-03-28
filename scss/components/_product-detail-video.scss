@@ -1,0 +1,11 @@
+.pdetail-video{
+  width: 100%;
+  margin-bottom: 42px;
+  video{
+    width: 100%;
+  }
+
+  @include respond-to(md){
+    margin-bottom: 162px;
+  }
+}

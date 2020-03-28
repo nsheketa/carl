@@ -1,0 +1,145 @@
+.pdetail-benefits{
+  background: #fff;
+}
+
+.pdetail-benefits__inner{
+  max-width: 400px;
+  @include center;
+  @include respond-to(md){
+    max-width: 1558px;
+    display: flex;
+    padding: 90px 0 81px;
+  }
+}
+
+.pdetail-benefits__item{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 30px 0 40px;
+  &:last-of-type{
+   border: none;
+  }
+  @include respond-to(md){
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 33.33%;
+    max-width: 33.33%;
+    padding: 0 20px 20px;
+    border-bottom: none;
+    border-right: 1px solid #E0E0E0;
+  }
+}
+
+.pdetail-benedits__item-icon{
+  margin-bottom: 10px;
+  img{
+    width: 100%;
+  }
+}
+
+.pdetail-benefits__item-content{
+  max-width: 200px;
+  p{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #000000;
+  }
+  @include respond-to(md){
+    max-width: 100%;
+    margin-bottom: 40px;
+    p{
+      font-size: 20px;
+      line-height: 1.25;
+    }
+  }
+  @include respond-to(xl){
+    p{
+      font-size: 24px;
+    }
+  }
+}
+
+.pdetail-benefits__item-num{
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 1.2;
+
+  @include respond-to(md){
+    font-size: 72px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+}
+
+.pdetail-benefits__item-01{
+  .pdetail-benefits__item-icon{
+    max-width: 128px;
+    margin-right: 21px;
+    align-items: flex-end;
+  }
+
+  @include respond-to(md){
+    flex-direction: row;
+    align-items: flex-end;
+    .pdetail-benefits__item-icon{
+      max-width: 147px;
+      margin-bottom: 0;
+      align-self: center;
+    }
+  }
+  @include respond-to(xl){
+    .pdetail-benefits__item-icon{
+      align-self: flex-end;
+    }
+  }
+}
+
+.pdetail-benefits__item-02{
+  .pdetail-benefits__item-icon{
+    max-width: 80px;
+    margin-right: 27px;
+    margin-bottom: 0;
+  }
+  .pdetail-benefits__item-content{
+    p {
+      font-size: 38px;
+      line-height: 1.26;
+    }
+  }
+
+  @include respond-to(md){
+    align-items: center;
+    .pdetail-benefits__item-icon{
+      @include center;
+      margin-bottom: 10px;
+    }
+    .pdetail-benefits__item-content{
+      text-align: center;
+      p {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.pdetail-benefits__item-03{
+  flex-direction: column;
+  align-items: center;
+  .pdetail-benefits__item-icon{
+    max-width: 202px;
+   @include center;
+  }
+
+  .pdetail-benefits__item-content{
+    text-align: center;
+    max-width: 100%;
+  }
+  @include respond-to(md){
+    .pdetail-benefits__item-content{
+      text-align: center;
+    }
+  }
+}

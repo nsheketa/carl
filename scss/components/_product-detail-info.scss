@@ -1,0 +1,204 @@
+.pdetail-info {
+  position: relative;
+  background-color: #fff;
+  @include respond-to(md){
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -103px;
+      right: -300px;
+      @include square(609px);
+      background: url('#{$imgUrl}product-details/dotted.png')no-repeat center /contain;
+      z-index: 7;
+    }
+  }
+}
+
+///Top image
+/*******************/
+
+.pdetail-info__item--top {
+  position: relative;
+  z-index: 5;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 48px;
+    right: -155px;
+    @include square(331px);
+    background: url('#{$imgUrl}product-details/dotted.png')no-repeat center /contain;
+  }
+  .pdetail-info__item-img {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .pdetail-info__item-content {
+    position: relative;
+    padding: 47px 20px;
+    max-width: 400px;
+    @include center;
+    p {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    span {
+      font-size: 120px;
+      margin-left: -15px;
+    }
+  }
+
+  @include respond-to(md) {
+    max-width: 1290px;
+    @include center;
+    background: #EDECEA;
+    display: flex;
+    align-items: center;
+    &:after {
+      display: none;
+      @include square(609px);
+      bottom: auto;
+      top: -32px;
+      right: -129px;
+      z-index: 2;
+    }
+    .pdetail-info__item-img {
+      width: 63%;
+      max-width: 63%;
+      margin-left: 0;
+      z-index: 2;
+    }
+
+    .pdetail-info__item-content{
+      background: #EDECEA;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      width: 38%;
+      max-width: 38%;
+      z-index: 2;
+    }
+    .pdetail-info__item-content-inner {
+      margin-left: -55px;
+      margin-right: 0;
+      padding: 20px 0;
+      z-index: 2;
+
+      span {
+        font-size: 180px;
+        margin-left: -20px;
+      }
+    }
+  }
+}
+
+
+///Bottom image
+/*******************/
+
+.pdetail-info__item--bottom{
+  position: relative;
+  padding-bottom: 150px;
+  z-index: 0;
+  .pdetail-info__item-img{
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    img{
+      width: 100%;
+    }
+  }
+  .pdetail-info__item-content-inner{
+    position: relative;
+    max-width: 265px;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -226px;
+      left: -180px;
+      @include square(506px);
+      background: url('#{$imgUrl}product-details/circle.png')no-repeat center /contain;
+    }
+    p{
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 1.6;
+      color: #000000;
+      strong{
+        font-weight: 500;
+        text-transform: uppercase;
+        display: block;
+      }
+    }
+  }
+
+  @include respond-to(md){
+    .pdetail-info__item-img{
+      position: absolute;
+      right: -148px;
+      top: -70px;
+      width: 78%;
+      height: 84%;
+      margin-left: 0;
+      z-index: 0;
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include square(100%);
+        background: linear-gradient(317.2deg, #FCFCFC 16.34%, rgba(252, 252, 252, 0.25) 34.36%);
+      }
+      img{
+        @include imageCover;
+      }
+    }
+    .pdetail-info__item-content{
+      padding: 200px 0 200px 0px;
+    }
+    .pdetail-info__item-content-inner{
+      position: relative;
+      max-width: 385px;
+      &:after{
+        @include square(707px);
+        bottom: -187px;
+        left: -249px;
+        top: auto;
+      }
+      p{
+        font-size: 45px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @include respond-to(xl){
+    .pdetail-info__item-img{
+      &:after{
+        background: linear-gradient(317.2deg, #FCFCFC 16.34%, rgba(252, 252, 252, 0.1) 34.36%);
+      }
+    }
+    .pdetail-info__item-content{
+      padding: 242px 0 260px 112px;
+    }
+    .pdetail-info__item-content-inner{
+      max-width: 520px;
+      &::after{
+        bottom: -131px;
+        left: -245px;
+      }
+      p{
+        font-size: 60px;
+      }
+    }
+  }
+}
