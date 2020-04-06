@@ -6,8 +6,7 @@
 
 .faq__bg {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  padding-bottom: 66.25%;
   z-index: 0;
 
   &:after{
@@ -28,6 +27,7 @@
     top: 0;
     width: 66%;
     height: 66%;
+    padding-bottom: 0;
     z-index: -1;
     &:after{
       display: none;

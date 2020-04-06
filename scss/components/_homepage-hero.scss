@@ -36,9 +36,13 @@
   display: flex;
   flex-direction: column;
   @include square(100%);
-  background-color: rgba($lightGreyColor,0.4);
+  background-color: rgba($lightGreyColor, 0.4);
+  transition: 2s all ease;
+  &.is-hidden {
+    opacity: 0;
+  }
 
-  @include respond-max(1024){
+  @include respond-max(1024) {
     padding-bottom: 111px;
   }
 }
@@ -52,8 +56,8 @@
     @include imageCover;
   }
 
-  video{
-    @include respond-max(1024){
+  video {
+    @include respond-max(1024) {
       min-width: auto;
       min-height: auto;
       width: auto;
@@ -61,7 +65,7 @@
     }
   }
 
-  @include respond-to(md){
+  @include respond-to(md) {
     position: absolute;
     top: 0;
     left: 0;
@@ -77,7 +81,7 @@
   padding: 17px 0px 32px 11px;
   max-width: 80%;
 
-  @include respond-max(1024){
+  @include respond-max(1024) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -105,11 +109,11 @@
     font-weight: 500;
     opacity: 0;
     @include transition-06;
-    &.is-hidden{
+    &.is-hidden {
       opacity: 0 !important;
       transition: 0s;
     }
-    &.is-shown{
+    &.is-shown {
       opacity: 1 !important;
     }
   }
@@ -120,24 +124,24 @@
     margin-bottom: 18px;
     opacity: 0;
     @include transition-06;
-    &.is-hidden{
+    &.is-hidden {
       opacity: 0 !important;
       transition: 0s;
     }
-    &.is-shown{
+    &.is-shown {
       opacity: 1 !important;
       transition-delay: 0.2s;
     }
   }
-  .btn{
+  .btn {
     opacity: 0;
     transform: translateY(30px);
-    &.is-hidden{
+    &.is-hidden {
       opacity: 0 !important;
       transform: translateY(30px) !important;
       transition: 0s;
     }
-    &.is-shown{
+    &.is-shown {
       opacity: 1 !important;
       transform: translateY(0) !important;
       transition-delay: 0.1s;
@@ -172,3 +176,46 @@
   }
 }
 
+.home-carousel__item--video{
+  .home-carousel__item-content{
+    padding-top: 32px;
+  }
+  .home-carousel__item-content-inner{
+    .btn{
+      width: auto;
+      border: 1px solid #000;
+      color: #000;
+      padding: 8px;
+      @include on-event {
+        background-color: $redColor;
+        color: #fff;
+        border-color: $redColor;
+      }
+      &.is-hidden {
+        opacity: 0 !important;
+        transform: translateY(-30px) !important;
+        transition: 0s;
+      }
+      &.is-shown {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        transition-delay: 0.1s;
+      }
+      &.initially-hidden {
+        opacity: 0 !important;
+        transform: translateY(-30px) !important;
+        transition: 0s;
+      }
+    }
+    @include respond-to(md){
+      top: auto;
+      bottom: 29%;
+
+      .btn{
+        border-color: #fff;
+        color: #fff;
+        padding: 20px;
+      }
+    }
+  }
+}

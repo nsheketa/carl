@@ -1,0 +1,161 @@
+.contact-locations {
+  position: relative;
+  margin-top: 41px;
+  padding-bottom: 71px;
+  @include respond-to(md) {
+    margin-top: 77px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+
+.contact-location__img {
+  margin: 0 -20px;
+  img {
+    width: 100%;
+  }
+  @include respond-to(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+.contact-locations__inner {
+  @include respond-to(xl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include respond-to(xl) {
+    padding-left: 70px;
+    padding-right: 126px;
+  }
+}
+
+.contact-locations__title {
+  position: relative;
+  margin-bottom: 47px;
+  z-index: 1;
+  h2 {
+    position: relative;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include title-bordered;
+    &:before {
+      bottom: -17px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  @include respond-to(md) {
+    margin-bottom: 209px;
+    h2 {
+      font-size: 36px;
+      &:after {
+        bottom: -33px;
+      }
+    }
+  }
+}
+
+.contact-locations__content {
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+  max-width: 780px;
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.86;
+    color: #575757;
+  }
+  @include respond-to(md) {
+    p {
+      font-size: 18px;
+      line-height: 1.67;
+      color: #000;
+    }
+  }
+}
+
+.contact-locations__list-wrap {
+  z-index: 1;
+  position: relative;
+  h3 {
+    display: none;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000;
+  }
+  @include respond-to(md) {
+    margin-bottom: 114px;
+    &:first-of-type {
+      display: block;
+    }
+    h3 {
+      display: block;
+      letter-spacing: 0.15em;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.contact-locations__list {
+  @include respond-to(sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include respond-to(md) {
+    flex-wrap: nowrap;
+  }
+}
+
+.contact-locations__list-item {
+  margin-bottom: 32px;
+  padding-top: 25px;
+  @include title-bordered;
+  &:before{
+    background-color: $redColor;
+    bottom: auto;
+    top: 0px;
+    width: 30px;
+  }
+  p {
+    line-height: 2;
+    color: #575757;
+    &.contact-locations__item-title {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+
+  @include respond-to(sm) {
+    width: 50%;
+    max-width: 50%;
+    padding-right: 20px;
+  }
+  @include respond-to(md) {
+    width: 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 60px;
+    p {
+      font-size: 16px;
+      &.contact-locations__item-title {
+        font-size: 18px;
+      }
+    }
+  }
+}

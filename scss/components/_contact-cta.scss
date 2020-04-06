@@ -1,0 +1,99 @@
+.contact-cta{
+  padding: 260px 0 151px;
+  height: auto;
+
+  h2{
+    font-size: 20px;
+    line-height: 2;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  p{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 890px;
+  }
+
+  .cta-form{
+    max-width: 808px;
+  }
+
+  .cta__input-wrap{
+    width: 352px;
+    @include center;
+  }
+  .cta__input{
+    font-size: 15px;
+    line-height: 2;
+    padding: 19px 19px 19px 86px;
+    background-color: #fff;
+    border-bottom: none;
+    height: 80px;
+    color: #000;
+  }
+  .cta__input-icon{
+    top: 0;
+    bottom: 0;
+    left: 19px;
+    margin: auto;
+  }
+
+  .cta__subscribe{
+    width: 352px;
+    margin-top: 6px;
+    @include center;
+    &:before{
+      display: none;
+    }
+    .btn{
+      font-size: 18px;
+      width: 100%;
+      height: 60px;
+      span{
+        height: 25px;
+        svg{
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  @include respond-to(md){
+    padding: 60px 0 130px;
+    p{
+      font-size: 18px;
+      line-height: 1.67;
+      margin-bottom: 34px;
+    }
+    .cta__input-wrap{
+      width: 519px;
+      max-width: 519px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .cta__input{
+      display: inline-block;
+      font-size: 18px;
+    }
+
+    .cta__subscribe{
+      display: inline-block;
+      width: 289px;
+      margin-top: 0;
+      margin-left: -5px;
+      vertical-align: middle;
+      .btn{
+        height: 80px;
+        span{
+          height: 66px;
+        }
+      }
+    }
+  }
+}

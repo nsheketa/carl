@@ -1,0 +1,26 @@
+.replacement-submenu{
+  padding: 39px 0 29px;
+  border-bottom: 1px solid #D8D8D8;;
+
+  .support-products__list-item{
+    &.is-active{
+      color: $redColor;
+    }
+  }
+  .support-products__list-wrap{
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .support-products__list{
+    margin-left: -76px;
+  }
+
+  @include respond-to(md){
+    padding: 89px 0 80px;
+    border-bottom: none;
+    .support-products__list{
+      margin-left: 0px;
+    }
+  }
+}
+

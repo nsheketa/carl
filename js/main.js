@@ -47,39 +47,39 @@ $(document).ready(function () {
       distance: '30px',
       origin: 'bottom',
       opacity: 0,
-      duration: 2000,
+      duration: 1500,
     };
 
     let slideUpInterval = {
       distance: '30px',
       origin: 'bottom',
       opacity: 0,
-      duration: 2000,
+      duration: 1500,
       interval: 300,
     };
 
     let fadeIn = {
       opacity: 0,
-      duration: 2000,
+      duration: 1500,
       debug: true,
     };
 
     let fadeInInterval = {
       opacity: 0,
-      duration: 2000,
+      duration: 1500,
       interval: 300,
     };
 
     let fadeInIntervalDelay = {
       opacity: 0,
-      duration: 2000,
+      duration: 1500,
       interval: 300,
       delay: 200
     };
 
     let fadeInIntervalDelayLong = {
       opacity: 0,
-      duration: 2000,
+      duration: 1500,
       interval: 300,
       delay: 600
     };
@@ -108,6 +108,8 @@ $(document).ready(function () {
     sr.reveal('.scaleUp', scaleUp);
     sr.reveal('.scaleUpInterval', scaleUpInterval);
     sr.reveal('.support-list__item', fadeInInterval);
+    sr.reveal('.contact-locations__list-item', fadeInInterval);
+    sr.reveal('.replacement-parts__row', fadeInInterval);
   }
 
   $('.scroll-link').on('click', e => {
@@ -197,6 +199,22 @@ $(document).ready(function () {
       $('.home-catalog__media-item' + target).addClass('is-active');
     });
 
+  $('.home-carousel').on('afterChange', function (event, slick, currentSlide) {
+    let h1 = $('.home-carousel').find('h1');
+    let p = $('.home-carousel').find('p');
+    let btn = $('.home-carousel').find('.btn');
+    let btnHidden = $('.home-carousel__item--video').find('.btn.initially-hidden');
+
+    h1.removeClass('is-hidden').addClass('is-shown');
+    p.removeClass('is-hidden').addClass('is-shown');
+    btn.removeClass('is-hidden').addClass('is-shown');
+    btnHidden.removeClass('is-shown').addClass('is-hidden');
+
+    if ($('.slick-active video').length !== 0) {
+      $('.slick-active video').get(0).play();
+    }
+  });
+
   $('.home-carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     let h1 = $('.home-carousel').find('h1');
     let p = $('.home-carousel').find('p');
@@ -204,16 +222,10 @@ $(document).ready(function () {
     h1.removeClass('is-shown').addClass('is-hidden');
     p.removeClass('is-shown').addClass('is-hidden');
     btn.removeClass('is-shown').addClass('is-hidden');
-  });
 
-  $('.home-carousel').on('afterChange', function (event, slick, currentSlide) {
-    let h1 = $('.home-carousel').find('h1');
-    let p = $('.home-carousel').find('p');
-    let btn = $('.home-carousel').find('.btn');
-
-    h1.removeClass('is-hidden').addClass('is-shown');
-    p.removeClass('is-hidden').addClass('is-shown');
-    btn.removeClass('is-hidden').addClass('is-shown');
+    if ($('.slick-active video').length !== 0) {
+      $('.slick-active video').get(0).pause();
+    }
   });
 
   //carousels
@@ -221,6 +233,7 @@ $(document).ready(function () {
     arrows: true,
     dots: true,
     fade: true,
+    speed: 1200,
     prevArrow: $('.home-carousel__arrows-wrap').find('.home-carousel__arrow--prev'),
     nextArrow: $('.home-carousel__arrows-wrap').find('.home-carousel__arrow--next'),
     dotsClass: 'home-slick__paging',
@@ -238,13 +251,19 @@ $(document).ready(function () {
     dotsClass: 'home-slick__paging',
   });
 
+  $('.about-timeline__items').slick({
+    dots: false,
+    arrows: false,
+    speed: 800
+  });
+
   $('.product-menu__list').slick({
     arrows: false,
     dots: true,
     mobileFirst: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    responsive:[
+    responsive: [
       {
         breakpoint: 768,
         settings: {
@@ -263,7 +282,7 @@ $(document).ready(function () {
           dots: true
         }
       }
-  ]
+    ]
   });
 
   $('.news-detail__media-carousel').slick({
@@ -273,7 +292,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    responsive:[
+    responsive: [
       {
         breakpoint: 768,
         settings: {
@@ -293,7 +312,7 @@ $(document).ready(function () {
     mobileFirst: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive:[
+    responsive: [
       {
         breakpoint: 768,
         settings: {
@@ -321,7 +340,7 @@ $(document).ready(function () {
     mobileFirst: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive:[
+    responsive: [
       {
         breakpoint: 768,
         settings: {
@@ -342,7 +361,87 @@ $(document).ready(function () {
     nextArrow: $('.pdetail-related__controls').find('.pdetail-related__arrow--next'),
   });
 
+  $('.search-block__carousel').slick({
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      },
+    ],
+  });
 
+  $('.replacement-parts__carousel').slick({
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+    ],
+  });
+
+  //end of carousels
+
+
+  $('.about-timeline__link').click(function (e) {
+    e.preventDefault();
+    let slideno = $(this).data('target');
+    $('.about-timeline__link').removeClass('is-active');
+    $(this).addClass('is-active');
+    $('.about-timeline__items').slick('slickGoTo', slideno - 1);
+  });
+
+  //faq accordion
+  $('.faq-content__item').on('click', function (e) {
+    if ($(this).hasClass('is-open')) {
+      $(this).removeClass('is-open');
+      $(this).next('.faq-content__item-desc').slideUp();
+    } else {
+      $('.faq-content__item').removeClass('is-open');
+      $(this).addClass('is-open');
+      $('.faq-content__item-desc').slideUp();
+      $(this).next('.faq-content__item-desc').slideDown();
+    }
+  });
+
+  //support list products menu
+  $('.support-products__list-item--mob').text($('.support-products__list-item.is-active').text());
+  $('.support-products__list-item--mob').on('click', (e) => {
+    $('.support-products__list').slideToggle(600);
+  });
+
+
+  //custom animation
   function heroContentAnimation() {
     const heroContentTl = new TimelineMax({
       repeat: 0,
@@ -387,48 +486,113 @@ $(document).ready(function () {
       .staggerTo(paging, 0.4, {opacity: 1}, 0.6, 'heading');
   }
 
+  $('.home-carousel__item--video  .btn').addClass('initially-hidden');
+
+  function heroVideoBtnInit() {
+    const video = $('.home-carousel__item--video video').get(0);
+    const duration = video.duration;
+    const btn = $('.home-carousel__item--video .btn.initially-hidden');
+    const timer = setInterval(() => {
+      let current = video.currentTime;
+      if (current >= duration - 0.5) {
+        clearInterval(timer);
+        btn.removeClass('is-hidden initially-hidden').addClass('is-shown');
+        // console.log('cleared');
+      } else {
+        // console.log(current);
+      }
+    }, 500)
+  }
+
   function heroVideoInit() {
     if ($('.home-hero').length > 0) {
+
+      if ($('.slick-active video').length !== 0) {
+        $('.slick-active video').get(0).pause();
+      }
 
       setTimeout(function () {
         $('.home-carousel').slick('slickGoTo', 1);
         $('.home-carousel__item-media video').get(0).play();
+
+        heroVideoBtnInit();
       }, 5500)
     }
   }
 
-  $('.about-timeline__items').slick({
-    dots: false,
-    arrows: false,
-    speed: 800
-  });
+  //product animation
 
-  $('.about-timeline__link').click(function(e) {
-    e.preventDefault();
-    let slideno = $(this).data('target');
-    $('.about-timeline__link').removeClass('is-active');
-    $(this).addClass('is-active');
-    $('.about-timeline__items').slick('slickGoTo', slideno - 1);
-  });
+  function productHeroContentAnimation() {
+    const heroContentTl = new TimelineMax({
+      repeat: 0,
+      delay: 1.2,
+      ease: Power0.easeNone
+    });
 
-  //faq accordion
-  $('.faq-content__item').on('click', function (e) {
-    if($(this).hasClass('is-open')){
-      $(this).removeClass('is-open');
-      $(this).next('.faq-content__item-desc').slideUp();
-    }else{
-      $('.faq-content__item').removeClass('is-open');
-      $(this).addClass('is-open');
-      $('.faq-content__item-desc').slideUp();
-      $(this).next('.faq-content__item-desc').slideDown();
+    const hero = $('.pdetail-hero__bg img');
+    const text = $('.pdetail-hero__content');
+
+    heroContentTl
+      .staggerFromTo(hero, 3.5, {scale: 1.15, opacity: 0.3}, {scale: 1, opacity: 1}, 0.6, 'border')
+      .staggerFromTo(text, 0.7, {opacity: 0, y: 30}, {opacity: 1, y: 0}, 0.1, '-=2')
+  }
+
+  function productTextParallax() {
+    let text = $('.product-text--animated');
+
+    if (isMobile()) {
+      return
+    } else {
+      text.each(function (i, el) {
+
+        let parallax = TweenMax.fromTo(this, 20, {
+            y: '30%',
+            ease: Power2.easeOut
+          }, {
+            y: '0%',
+            ease: Power2.easeOut
+          }
+        );
+
+        let scene = new ScrollMagic.Scene({
+          triggerElement: this,
+          duration: h * 2,
+          offset: -h / 2,
+        })
+          .setTween(parallax)
+          // .addIndicators()
+          .addTo(controller);
+      })
     }
-  });
+  }
 
-  //support list products menu
-  $('.support-products__list-item--mob').text($('.support-products__list-item.is-active').text());
-  $('.support-products__list-item--mob').on('click',(e)=>{
-    $('.support-products__list').slideToggle(600);
-  });
+  function productImgParallax() {
+    let img = $('.product-img--animated img');
+
+    img.each(function () {
+      let parallax = TweenMax.fromTo(this, 20, {
+          scale: '1.5',
+          ease: Power2.easeOut
+        }
+        , {
+          scale: '1',
+          ease: Power2.easeOut
+        });
+
+      let scene = new ScrollMagic.Scene({
+        triggerElement: this,
+        duration: h * 2,
+        offset: -h / 2,
+      })
+        .setTween(parallax)
+        // .addIndicators()
+        .addTo(controller);
+    })
+  }
+
+
+  productTextParallax();
+  productImgParallax();
 
   /* Trigger resize once */
   $(window).resize(function () {
@@ -457,6 +621,7 @@ $(document).ready(function () {
     heroAnimation();
     heroContentAnimation();
     heroVideoInit();
+    productHeroContentAnimation();
   });
 });
 

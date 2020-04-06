@@ -1,0 +1,145 @@
+.contact-hero {
+  position: relative;
+  @include topSectionPadding;
+
+
+  @include respond-to(md){
+
+  }
+}
+
+.contact-hero__bg {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66.25%;
+  overflow: hidden;
+  img {
+    @include imageCover;
+    height: auto;
+  }
+  @include respond-to(md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 53%;
+    height: 100%;
+    z-index: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+
+    img {
+      @include imageCover;
+      height: 100%;
+    }
+  }
+}
+
+.contact-hero__content {
+  margin-right: 15px;
+
+  @include respond-to(md) {
+    margin-right: 0;
+  }
+}
+
+.contact-hero__content-inner {
+  position: relative;
+  z-index: 1;
+  margin-top: -108px;
+  @include respond-to(md) {
+    margin-left: auto;
+    margin-top: 0;
+    width: 47%;
+    padding: 128px 20px 0 40px;
+  }
+  @include respond-to(xl) {
+    padding: 128px 30px 0 85px;
+  }
+}
+
+.contact-hero__title {
+  margin-bottom: 14px;
+  h1 {
+    font-size: 30px;
+    line-height: 1.16;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  @include respond-to(md) {
+    margin-left: -102px;
+    margin-bottom: 41px;
+    h1 {
+      font-weight: normal;
+      font-size: 60px;
+      line-height: 1;
+      color: #000000;
+    }
+  }
+
+  @include respond-to(xl) {
+    margin-left: -175px;
+    h1 {
+      font-size: 90px;
+    }
+  }
+}
+
+.contact-hero__form{
+  position: relative;
+  background: #F9F9F9;
+  padding: 34px 20px 0 30px;
+  margin-left: -20px;
+  @include respond-to(md){
+    background: transparent;
+    padding: 0;
+  }
+}
+
+.contact-hero__form-submit {
+  margin-top: 40px;
+  margin-right: -20px;
+  text-align: right;
+  .btn {
+    width: 125px;
+    position: relative;
+    height: 31px;
+    span {
+      position: absolute;
+      left: 17px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: transparent;
+      height: 100%;
+      width: auto;
+      svg{
+        fill: #fff;
+        height: 12px;
+        top: 10px;
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    text-align: center;
+    margin-right: 0;
+    margin-top: 12px;
+    .btn {
+      width: 100%;
+      height: 82px;
+      span {
+        left: 15px;
+        background-color: #fff;
+        width: 66px;
+        height: 66px;
+        svg{
+          fill: #000;
+          height: 100%;
+          top: 0;
+        }
+      }
+    }
+  }
+}

@@ -88,9 +88,14 @@
   }
 }
 
+.product-medium__img-wrap{
+  position: relative;
+}
+
 .product-medium__img{
   position: relative;
   margin-bottom: 66px;
+  overflow: hidden;
   img{
     width: 100%;
   }

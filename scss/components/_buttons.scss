@@ -55,6 +55,9 @@
       fill: $redColor;
     }
   }
+  &--white{
+    border: 1px solid #fff;
+  }
 
   &--bordered{
     width: 250px;
@@ -98,6 +101,9 @@
       svg {
         fill: #000;
       }
+    }
+    &.btn--white{
+      background-color: $redColor;
     }
 
     &.btn--bordered{

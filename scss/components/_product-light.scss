@@ -15,6 +15,7 @@
   margin-left: -20px;
   padding-bottom: 52%;
   z-index: 1;
+  overflow: hidden;
   img {
     @include imageCover;
   }

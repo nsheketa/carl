@@ -21,6 +21,7 @@
 .pdetail-info__item--top {
   position: relative;
   z-index: 5;
+
   &:after {
     content: '';
     display: block;
@@ -33,6 +34,7 @@
   .pdetail-info__item-img {
     width: calc(100% + 40px);
     margin-left: -20px;
+    overflow: hidden;
 
     img{
       width: 100%;
@@ -58,6 +60,7 @@
 
   @include respond-to(md) {
     max-width: 1290px;
+    overflow: hidden;
     @include center;
     background: #EDECEA;
     display: flex;
@@ -75,6 +78,7 @@
       max-width: 63%;
       margin-left: 0;
       z-index: 2;
+
     }
 
     .pdetail-info__item-content{
@@ -111,6 +115,7 @@
   .pdetail-info__item-img{
     width: calc(100% + 40px);
     margin-left: -20px;
+    overflow: hidden;
     img{
       width: 100%;
     }
@@ -141,6 +146,7 @@
   }
 
   @include respond-to(md){
+    overflow: hidden;
     .pdetail-info__item-img{
       position: absolute;
       right: -148px;

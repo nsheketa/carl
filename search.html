@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Search</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no"/>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Responsive images polyfill -->
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement('picture');
+  </script>
+  <script src="js/picturefill.min.js" async></script>
+  <!-- Responsive image polyfill end -->
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+<div class="is-mobile"></div>
+
+<div class="page-wrapper">
+  <header class="header">
+    <div class="main-container">
+      <div class="header__inner">
+        <button class="header__hamburger">
+          <span class="header__hamburger-text hide-in-mob">Menu</span>
+          <span class="line"></span><span class="line"></span><span class="line"></span>
+        </button>
+
+        <a href="index.html" class="header__logo">
+          <img src="img/logo-red.svg" alt="Carl">
+        </a>
+
+        <div class="header__inner--right">
+          <div class="header-search">
+            <a href="#" class="header-search__link">
+              <img src="img/icons/icon-search.svg" alt="">
+              <img src="img/icons/icon-close-black.svg" class="is-hidden" alt="">
+            </a>
+            <!--<div class="header-search__popup">-->
+            <!--<input type="text" class="header-search__input" placeholder="Type any to search">-->
+            <!--<button type="submit" class="header-search__submit">-->
+            <!--<img src="img/icons/icon-search.svg" alt="">-->
+            <!--</button>-->
+            <!--</div>-->
+          </div>
+
+          <a href="#" class="header__lang hide-in-mob">En</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="header-search__popup">
+    <a href="index.html" class="header-search__logo">
+      <img src="img/logo-white.svg" alt="Carl">
+    </a>
+    <div class="main-container">
+      <div class="header-search__popup-inner">
+        <button class="header-search__popup-close">
+          <img src="img/icons/icon-close.svg" alt="">
+        </button>
+        <div class="header-search__input-wrap">
+          <input type="text" class="header-search__input" placeholder="Type any to search">
+          <button type="submit" class="header-search__submit">
+            <img src="img/icons/icon-search-white.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--page menu-->
+  <div class="page-menu">
+    <div class="page-menu__header header">
+      <div class="main-container">
+        <div class="page-menu__header-inner header__inner">
+          <button class="page-menu__close">
+          <span class="page-menu__close-icon">
+            <img src="img/icons/icon-close.svg" alt="">
+          </span>
+            <span class="page-menu__close-text hide-in-mob">Close</span>
+          </button>
+          <a href="index.html" class="header__logo">
+            <img src="img/logo-white.svg" alt="Carl">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-menu__inner">
+      <div class="page-menu__list-wrap">
+        <nav class="page-menu__list">
+          <ul>
+            <li class="is-active">
+              <a href="#" data-img="#menu-products"> CARL Products</a>
+              <ul>
+                <li><a href="#" data-img="#menu-about">Paper Trimmers <span><sup>40</sup></span></a></li>
+                <li><a href="#" data-img="#menu-news">Paper Punches <span><sup>10</sup></span></a></li>
+                <li><a href="#" data-img="#menu-support">Security Products <span><sup>40</sup></span></a></li>
+                <li><a href="#" data-img="#menu-news">Office Essentials <span><sup>10</sup></span></a></li>
+              </ul>
+            </li>
+            <li><a href="about.html" data-img="#menu-about">About</a></li>
+            <li><a href="news.html" data-img="#menu-news">News</a></li>
+            <li><a href="support.html" data-img="#menu-support">Support</a></li>
+          </ul>
+        </nav>
+        <div class="page-menu__lang">
+          <ul>
+            <li><a href="#">En</a></li>
+            <li><a href="#">中文</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-menu__media">
+        <div class="page-menu__media-item is-active" id="menu-products">
+          <picture>
+            <source srcset="img/menu/menu-01.png" media="(min-width: 768px)"/>
+            <img src="img/menu/menu-01.png" alt=""/>
+          </picture>
+        </div>
+        <div class="page-menu__media-item" id="menu-about">
+          <picture>
+            <source srcset="img/menu/menu-02.png" media="(min-width: 768px)"/>
+            <img src="img/menu/menu-02.png" alt=""/>
+          </picture>
+        </div>
+        <div class="page-menu__media-item" id="menu-news">
+          <picture>
+            <source srcset="img/menu/menu-03.png" media="(min-width: 768px)"/>
+            <img src="img/menu/menu-03.png" alt=""/>
+          </picture>
+        </div>
+        <div class="page-menu__media-item" id="menu-support">
+          <picture>
+            <source srcset="img/menu/menu-04.png" media="(min-width: 768px)"/>
+            <img src="img/menu/menu-04.png" alt=""/>
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--page menu-->
+
+  <main>
+    <section class="search">
+      <div class="search-total fadeInInterval">
+        <div class="main-container">
+          <div class="search-total__inner">
+            <p>SEARCH RESULT: &nbsp;<span>heavy (22)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <article class="search-products search-block fadeInInterval">
+          <div class="search-products__title search-block__title">
+            <h2 class="clearfix">
+              <span class="search-block__title--before"></span>
+              Products(<span class="quantity">11</span>)
+              <span class="search-block__title--after"></span>
+            </h2>
+          </div>
+          <div class="search-block__carousel search-products__carousel">
+            <div class="search-block__carousel-item">
+              <a href="#" class="search-block__carousel-item-inner">
+                <div class="search-block__carousel-img">
+                  <picture>
+                    <source srcset="img/carousel/carousel.png" media="(min-width: 768px)"/>
+                    <img src="img/carousel/carousel.png" alt=""/>
+                  </picture>
+                </div>
+                <div class="search-block__carousel-content">
+                  <p>DC-100N Personal Paper Trimmer</p>
+                </div>
+              </a>
+            </div>
+            <div class="search-block__carousel-item">
+              <a href="#" class="search-block__carousel-item-inner">
+                <div class="search-block__carousel-img">
+                  <picture>
+                    <source srcset="img/carousel/carousel.png" media="(min-width: 768px)"/>
+                    <img src="img/carousel/carousel.png" alt=""/>
+                  </picture>
+                </div>
+                <div class="search-block__carousel-content">
+                  <p>DC-100N Personal Paper Trimmer</p>
+                </div>
+              </a>
+            </div>
+            <div class="search-block__carousel-item">
+              <a href="#" class="search-block__carousel-item-inner">
+                <div class="search-block__carousel-img">
+                  <picture>
+                    <source srcset="img/carousel/carousel.png" media="(min-width: 768px)"/>
+                    <img src="img/carousel/carousel.png" alt=""/>
+                  </picture>
+                </div>
+                <div class="search-block__carousel-content">
+                  <p>DC-100N Personal Paper Trimmer</p>
+                </div>
+              </a>
+            </div>
+            <div class="search-block__carousel-item">
+              <a href="#" class="search-block__carousel-item-inner">
+                <div class="search-block__carousel-img">
+                  <picture>
+                    <source srcset="img/carousel/carousel.png" media="(min-width: 768px)"/>
+                    <img src="img/carousel/carousel.png" alt=""/>
+                  </picture>
+                </div>
+                <div class="search-block__carousel-content">
+                  <p>DC-100N Personal Paper Trimmer</p>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </article>
+
+        <article class="search-blogs search-block fadeInInterval">
+          <div class="search-products__title search-block__title">
+            <h2 class="clearfix">
+              <span class="search-block__title--before"></span>
+              Blogs(<span class="quantity">11</span>)
+              <span class="search-block__title--after"></span>
+            </h2>
+          </div>
+          <div class="search-block__carousel search-products__carousel">
+            <div class="search-block__carousel-item">
+              <a href="#" class="search-block__carousel-item-inner">
+                <div class="search-block__carousel-img">
+                  <picture>
+                    <source srcset="img/carousel/carousel.png" media="(min-width: 768px)"/>
+                    <img src="img/carousel/carousel.png" alt=""/>
+                  </picture>
+                </div>
+                <div class="search-block__carousel-content">
+                  <p>DC-100N Personal Paper Trimmer</p>
+                </div>
+              </a>
+            </div>
+            <div class="search-block__carousel-item">
+              <a href="#" class="search-block__carousel-item-inner">
+                <div class="search-block__carousel-img">
+                  <picture>
+                    <source srcset="img/carousel/carousel.png" media="(min-width: 768px)"/>
+                    <img src="img/carousel/carousel.png" alt=""/>
+                  </picture>
+                </div>
+                <div class="search-block__carousel-content">
+                  <p>DC-100N Personal Paper Trimmer</p>
+                </div>
+              </a>
+            </div>
+            <div class="search-block__carousel-item">
+              <a href="#" class="search-block__carousel-item-inner">
+                <div class="search-block__carousel-img">
+                  <picture>
+                    <source srcset="img/carousel/carousel.png" media="(min-width: 768px)"/>
+                    <img src="img/carousel/carousel.png" alt=""/>
+                  </picture>
+                </div>
+                <div class="search-block__carousel-content">
+                  <p>DC-100N Personal Paper Trimmer</p>
+                </div>
+              </a>
+            </div>
+            <div class="search-block__carousel-item">
+              <a href="#" class="search-block__carousel-item-inner">
+                <div class="search-block__carousel-img">
+                  <picture>
+                    <source srcset="img/carousel/carousel.png" media="(min-width: 768px)"/>
+                    <img src="img/carousel/carousel.png" alt=""/>
+                  </picture>
+                </div>
+                <div class="search-block__carousel-content">
+                  <p>DC-100N Personal Paper Trimmer</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="search-others search-block fadeInInterval">
+          <div class="search-products__title search-block__title">
+            <h2 class="clearfix">
+              <span class="search-block__title--before"></span>
+              Others(<span class="quantity">1</span>)
+              <span class="search-block__title--after"></span>
+            </h2>
+          </div>
+          <div class="search-block__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam est diam, consequat in augue faucibus, convallis porta lectus. Quisque
+              auctor facilisis finibus. Fusce placerat consectetur ipsum, vel euismod tortor mollis nec. Donec porta efficitur pretium. Aenean a
+              ultricies ex, nec maximus enim. Sed est orci, sollicitudin eget pellentesque suscipit, pretium id mauris. Curabitur erat sapien,
+              consequat a ligula non, consectetur sodales ante. Fusce ultrices faucibus lectus, ut consequat lorem. Fusce gravida vel diam id
+              hendrerit.</p>
+
+              <p>Proin id tellus non arcu ultrices convallis. Etiam mollis erat a tellus fringilla elementum. Sed vitae tortor ipsum. Curabitur eleifend
+              erat eu pretium aliquam. Maecenas vestibulum porttitor ipsum at vulputate. Fusce dictum quam ex. Aenean non sodales turpis. Praesent
+              aliquet turpis a ex maximus, in vulputate nulla pretium. Donec dapibus diam metus, at imperdiet nibh luctus eu. Vestibulum tempor eros
+              mattis diam auctor vulputate.</p>
+
+              <p>Vivamus fringilla, odio eget vulputate venenatis, nisi tortor ultrices felis, nec pulvinar metus tortor eu lectus. Praesent dignissim
+              tempor venenatis. Sed sollicitudin risus ligula. Nulla orci tellus, dapibus sed pharetra quis, feugiat et purus. Pellentesque consequat
+              libero accumsan quam mattis, eget auctor diam congue. Donec tristique magna sit amet dignissim elementum. Morbi sollicitudin non massa
+              nec efficitur. Nunc consectetur felis eu sagittis convallis. Phasellus sodales ligula efficitur vulputate lacinia. Donec tincidunt
+              lectus vitae nunc pulvinar, quis dignissim ante posuere. Fusce hendrerit metus et cursus semper. Suspendisse eleifend, dui vitae
+              elementum viverra, lacus arcu elementum lectus, ut convallis elit metus a libero. Sed eu nisi ut sapien tempus tincidunt eget id
+              erat.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer fadeInInterval">
+    <div class="main-container">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <img src="img/logo-white.svg" alt="Carl">
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">News/Blog</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">Order Support</a></li>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Shipping Information</a></li>
+            <li><a href="#">Returns & Return Policy</a></li>
+          </ul>
+        </nav>
+        <div class="footer-socials">
+          <a href="#" target="_blank" class="footer-socials__link">
+            <img src="img/icons/icon-fb.svg" alt="">
+          </a>
+          <a href="#" target="_blank" class="footer-socials__link">
+            <img src="img/icons/icon-insta.svg" alt="">
+          </a>
+          <a href="#" target="_blank" class="footer-socials__link">
+            <img src="img/icons/icon-wechat.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="main-container">
+        <p>© 2019 CARL INTERNATIONAL MFG. CO., LIMITED. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/vendor/ofi.min.js"></script>
+<script src="js/vendor/slick.min.js"></script>
+<script src="js/vendor/scrollreveal.min.js"></script>
+<script src="js/vendor/TweenMax.min.js"></script>
+<script src="js/vendor/ScrollMagic.min.js"></script>
+<script src="js/vendor/debug.addIndicators.min.js"></script>
+<script src="js/vendor/animation.gsap.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+</html>
+

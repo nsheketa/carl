@@ -34,6 +34,7 @@
 .pdetail-hero__bg{
   position: relative;
   padding-bottom: 66.25%;
+  overflow: hidden;
 
   img{
     @include imageCover;
@@ -43,6 +44,7 @@
     top: 172px;
     left: 0;
     @include square(100%);
+    height: 798px;
   }
 }
 
