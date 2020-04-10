@@ -54,8 +54,17 @@
   z-index: 1;
   width: calc(100% + 40px);
   margin-left: -20px;
+  .product-medium__img{
+    position: relative;
+    padding-bottom: 67%;
+  }
   img {
-    width: 100%;
+    backface-visibility: hidden;
+    height: 120%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    will-change: scroll-position;
   }
   @include respond-to(md) {
     width: 100%;

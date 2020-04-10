@@ -47,6 +47,10 @@
   &--square-sm{
     max-width: 558px;
     margin-left: -20px;
+    .product-medium__img{
+      padding-bottom: 115%;
+    }
+
     &:after{
       content: '';
       display: block;
@@ -63,6 +67,10 @@
     margin-left: auto;
     margin-right: -20px;
     padding-left: 30px;
+
+    .product-medium__img{
+      padding-bottom: 115%;
+    }
   }
 
   @include respond-to(md){
@@ -90,14 +98,22 @@
 
 .product-medium__img-wrap{
   position: relative;
+  width: 100%;
 }
 
 .product-medium__img{
   position: relative;
   margin-bottom: 66px;
   overflow: hidden;
+  width: 100%;
   img{
-    width: 100%;
+    @include imageCover;
+    backface-visibility: hidden;
+    height: 120%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    will-change: scroll-position;
   }
   &--square-lg{
     max-width: 100%;

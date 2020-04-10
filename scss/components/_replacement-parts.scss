@@ -1,4 +1,5 @@
 .replacement-parts {
+  padding-top: 40px;
   padding-bottom: 119px;
 }
 
@@ -165,6 +166,53 @@
     max-width: 75%;
     .slick-dots {
       display: none;
+    }
+  }
+}
+
+.replacement-parts__carousel{
+  .slick-arrow {
+    position: absolute;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0;
+    border: none;
+    display: block;
+    @include square(19px);
+    z-index: 5;
+    top: -10px;
+    bottom: 0;
+    margin: auto;
+    outline: none !important;
+    opacity: 0.5;
+    @include transition-03();
+    @include on-event{
+      opacity: 0.7;
+    }
+    &.slick-disabled {
+      display: none !important;
+    }
+    &.slick-next {
+      background-image: url("#{$imgUrl}icons/arrow-next-grey-md.svg");
+      right: 10px;
+    }
+    &.slick-prev {
+      background-image: url("#{$imgUrl}icons/arrow-next-grey-md.svg");
+      transform: rotate(-180deg);
+      left: 10px;
+    }
+  }
+  @include respond-to(xs){
+    .slick-arrow {
+      @include square(25px);
+      &.slick-next {
+        right: 17px;
+      }
+      &.slick-prev {
+        left: 17px;
+      }
     }
   }
 }

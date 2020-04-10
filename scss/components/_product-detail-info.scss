@@ -32,12 +32,20 @@
     background: url('#{$imgUrl}product-details/dotted.png')no-repeat center /contain;
   }
   .pdetail-info__item-img {
+    position: relative;
     width: calc(100% + 40px);
+    padding-bottom: 100%;
     margin-left: -20px;
     overflow: hidden;
 
     img{
-      width: 100%;
+     @include imageCover;
+      max-width: none;
+      height: 130%;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      will-change: scroll-position;
     }
   }
 
@@ -76,6 +84,7 @@
     .pdetail-info__item-img {
       width: 63%;
       max-width: 63%;
+      padding-bottom: 63%;
       margin-left: 0;
       z-index: 2;
 
@@ -113,11 +122,19 @@
   padding-bottom: 150px;
   z-index: 0;
   .pdetail-info__item-img{
+    position: relative;
     width: calc(100% + 40px);
+    padding-bottom: 82%;
     margin-left: -20px;
     overflow: hidden;
     img{
-      width: 100%;
+      @include imageCover;
+      max-width: none;
+      height: 120%;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      will-change: scroll-position;
     }
   }
   .pdetail-info__item-content-inner{
@@ -153,6 +170,7 @@
       top: -70px;
       width: 78%;
       height: 84%;
+      padding-bottom: 0;
       margin-left: 0;
       z-index: 0;
       &:after{
@@ -165,7 +183,7 @@
         background: linear-gradient(317.2deg, #FCFCFC 16.34%, rgba(252, 252, 252, 0.25) 34.36%);
       }
       img{
-        @include imageCover;
+
       }
     }
     .pdetail-info__item-content{

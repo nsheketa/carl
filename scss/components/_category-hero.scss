@@ -46,11 +46,15 @@
 }
 
 .category-hero__media.categories-list__item-media {
+  position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 0;
+  padding: 0 0 66.53%;
   img {
-    width: 100%;
+    //width: 100%;
+  }
+  @include respond-to(md){
+    padding-bottom: 74%;
   }
 }
 

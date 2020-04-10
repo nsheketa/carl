@@ -2,17 +2,74 @@
   padding-top: 35px;
   padding-bottom: 109px;
 
-  @include respond-to(md){
+  @include respond-to(md) {
     padding-top: 65px;
   }
 }
 
 .about-timeline__links {
-  display: flex;
-  justify-content: space-between;
-  padding: 32px 0 38px;
-  max-width: 963px;
+  //display: flex;
+  //justify-content: space-between;
+  padding: 32px 30px 38px;
+  max-width: 1070px;
   @include center;
+  overflow: hidden;
+
+  @include respond-to(xs){
+    padding: 32px 50px 38px;
+  }
+}
+
+.about-timeline__links-carousel {
+  position: relative;
+  .slick-slide{
+    text-align: center;
+    cursor: pointer;
+  }
+  .slick-arrow {
+    position: absolute;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 0;
+    border: none;
+    display: block;
+    @include square(19px);
+    z-index: 0;
+    top: -10px;
+    bottom: 0;
+    margin: auto;
+    outline: none !important;
+    opacity: 0.5;
+    @include transition-03();
+    @include on-event{
+      opacity: 0.7;
+    }
+    &.slick-disabled {
+      display: none !important;
+    }
+    &.slick-next {
+      background-image: url("#{$imgUrl}icons/arrow-next-grey-md.svg");
+      right: -25px;
+    }
+    &.slick-prev {
+      background-image: url("#{$imgUrl}icons/arrow-next-grey-md.svg");
+      transform: rotate(-180deg);
+      left: -25px;
+    }
+  }
+  @include respond-to(xs){
+    .slick-arrow {
+      @include square(30px);
+      &.slick-next {
+        right: -40px;
+      }
+      &.slick-prev {
+        left: -40px;
+      }
+    }
+  }
 }
 
 .about-timeline__link {
@@ -31,11 +88,11 @@
     opacity: 1;
     border-color: #C6333A;
   }
-  @include on-event{
+  @include on-event {
     color: #C6333A;
   }
 
-  @include respond-to(md){
+  @include respond-to(md) {
     font-size: 30px;
     line-height: 1.2;
   }
@@ -47,7 +104,7 @@
     display: flex;
     justify-content: space-between;
   }
-  @include respond-to(xl){
+  @include respond-to(xl) {
     padding-left: 37px;
     padding-right: 65px;
   }
@@ -55,12 +112,12 @@
 
 .about-timeline__item-content-wrap {
 
-  @include respond-to(md){
+  @include respond-to(md) {
     width: 60%;
     max-width: 60%;
     display: flex;
   }
-  @include respond-to(xl){
+  @include respond-to(xl) {
     width: 56%;
     max-width: 56%;
   }
@@ -70,7 +127,7 @@
   position: relative;
   width: 176px;
   margin-bottom: 30px;
-  @include respond-to(sm){
+  @include respond-to(sm) {
     width: 256px;
   }
   @include respond-to(md) {
@@ -98,7 +155,7 @@
     letter-spacing: -0.4px;
   }
 
-  @include respond-to(sm){
+  @include respond-to(sm) {
     left: 200px;
   }
   @include respond-to(md) {
@@ -116,7 +173,7 @@
   }
 }
 
-.about-timeline__item-content{
+.about-timeline__item-content {
   max-width: 515px;
   @include center;
   p {
@@ -125,7 +182,7 @@
     line-height: 2;
     color: #575757;
   }
-  @include respond-to(md){
+  @include respond-to(md) {
     padding: 38px 30px 0;
     flex: 1 1 auto;
     max-width: 100%;
@@ -138,12 +195,12 @@
       color: #7E7E7E;
     }
   }
-  @include respond-to(xl){
-    p{
+  @include respond-to(xl) {
+    p {
       font-size: 30px;
     }
   }
-  @include respond-to(xxl){
+  @include respond-to(xxl) {
     padding: 29px 75px 0 51px;
   }
 }

@@ -18,6 +18,12 @@
   overflow: hidden;
   img {
     @include imageCover;
+    backface-visibility: hidden;
+    height: 120%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    will-change: scroll-position;
   }
   @include respond-to(md) {
     margin-left: -50px;
